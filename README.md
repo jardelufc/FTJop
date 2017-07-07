@@ -20,6 +20,8 @@ JOP+HAM+CRC:
 
 Substitui o arquivo mem_sc que estiver lá por mem_sc, e vai no jop_cpu e descomenta o sinal crc_bsy se estiver sendo usado
 
+JopMethodInfoLesc.java is the program for appendind extra CRC check bytes for each method.
+
 
 
 
