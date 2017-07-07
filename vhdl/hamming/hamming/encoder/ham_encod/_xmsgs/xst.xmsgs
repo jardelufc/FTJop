@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_enc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/LESC/Hamming/hamming(15-09)/encoder/ham_encod/../ham_enc.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_enc/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/LESC/Hamming/hamming(15-09)/encoder/ham_encod/../ham_enc.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">enable, data</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="unknown" >Register &lt;<arg fmt="%s" index="1">temp&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ham_enc</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="unknown" >Register &lt;<arg fmt="%s" index="1">temp&lt;2&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ham_enc</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="unknown" >Register &lt;<arg fmt="%s" index="1">temp&lt;4&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ham_enc</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="unknown" >Register &lt;<arg fmt="%s" index="1">temp&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">ham_enc</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">D</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">H</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">temp</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Ham_out</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

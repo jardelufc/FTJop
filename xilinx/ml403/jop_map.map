@@ -1,0 +1,93 @@
+Release 9.1i Map J.30
+Xilinx Map Application Log File for Design 'jop'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx91i\bin\nt\map.exe -ise
+C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise -intstyle ise -p
+xc4vfx12-ff668-10 -cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf 
+Target Device  : xc4vfx12
+Target Package : ff668
+Target Speed   : -10
+Mapper Version : virtex4 -- $Revision: 1.36 $
+Mapped Date    : Thu Apr 23 11:05:30 2009
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Running unrelated packing...
+ERROR:Pack:18 - The design is too large for the given device and package. 
+   Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device.
+
+   If the slice count exceeds device resources you might try to disable register
+   ordering (-r).  Also if your design contains AREA_GROUPs, you may be able to
+   improve density by adding COMPRESSION to your AREA_GROUPs if you haven't done
+   so already.
+
+   NOTE: An NCD file will still be generated to allow you to examine the mapped
+   design.  This file is intended for evaluation use only, and will not process
+   successfully through PAR.
+
+   This mapped NCD file can be used to evaluate how the design's logic has been
+   mapped into FPGA logic resources.  It can also be used to analyze
+   preliminary, logic-level (pre-route) timing with one of the Xilinx static
+   timing analysis tools (TRCE or Timing Analyzer).
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      1
+Number of warnings:    3
+Logic Utilization:
+  Total Number Slice Registers:     9,605 out of  10,944   87%
+    Number used as Flip Flops:                 1,347
+    Number used as Latches:                    8,258
+  Number of 4 input LUTs:           8,052 out of  10,944   73%
+Logic Distribution:
+  Number of occupied Slices:                        7,617 out of   5,472  139%
+(OVERMAPPED)
+    Number of Slices containing only related logic:   6,805 out of   7,617   89%
+    Number of Slices containing unrelated logic:        812 out of   7,617   10%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          8,180 out of  10,944   74%
+  Number used as logic:              8,052
+  Number used as a route-thru:         127
+  Number used as Shift registers:        1
+  Number of bonded IOBs:               69 out of     320   21%
+  Number of BUFG/BUFGCTRLs:             4 out of      32   12%
+    Number used as BUFGs:                4
+    Number used as BUFGCTRLs:            0
+  Number of FIFO16/RAMB16s:             4 out of      36   11%
+    Number used as FIFO16s:              0
+    Number used as RAMB16s:              4
+
+Total equivalent gate count for design:  379,819
+Additional JTAG gate count for IOBs:  3,312
+Peak Memory Usage:  343 MB
+Total REAL time to MAP completion:  1 mins 30 secs 
+Total CPU time to MAP completion:   1 mins 29 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "jop_map.mrp" for details.
+Problem encountered during the packing phase.

@@ -1,0 +1,3 @@
+xst -ise "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod/ham_decod.ise" -intstyle ise -ifn hamming.xst -ofn hamming.syr
+xst -ise "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod/ham_decod.ise" -intstyle ise -ifn hamming.xst -ofn hamming.syr
+xst -ise "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod/ham_decod.ise" -intstyle ise -ifn hamming.xst -ofn hamming.syr

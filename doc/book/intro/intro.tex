@@ -1,0 +1,339 @@
+
+
+This handbook introduces a Java processor for embedded real-time
+systems, in particular the design of a small processor for
+resource-constrained devices with time-predictable execution of Java
+programs. This Java processor is called JOP -- which stands for Java
+Optimized Processor --, based on the assumption that a full native
+implementation of all Java bytecode instructions is not a useful
+approach.
+
+\section{A Quick Tour on JOP}
+
+In the following section we will give a quick overview on JOP and a
+short description how to get JOP running within an FPGA. A detailed
+description of the build process can be found in
+Chapter~\ref{chap:build}.
+
+JOP is a soft-core written in VHDL plus tools in Java, a simplified
+Java library (JDK), and application examples. JOP is delivered in
+source only and the sources are hosted at
+Opencores.\footnote{\url{http://www.opencores.org/projects.cgi/web/jop}}
+
+
+\subsection{Building JOP and Running ``Hello World"}
+
+To build JOP you first have to download the source tree from
+Opencores. A \emph{Makefile} (or an Ant file) contains all necessary
+steps to build the tools, the processor, and the application.
+Configuration of the FPGA and downloading the Java application is
+also part of the Makefile.
+
+In this description we assume the FPGA board Cycore (see
+Appendix~\ref{appx:cycore}). This board is the default target for
+the Makefile. The board has to be connected to the power supply and
+to the PC via a ByteBlaster download cable and a serial cable.
+
+The FPGA is configured via the ByteBlaster cable. The Java
+application is downloaded after the FPGA configuration via the serial
+cable. Besides the download the serial cable is also used as a
+communication link between JOP and the PC. \code{System.out} and
+\code{System.in} represent this serial link on JOP.
+
+In order to build the whole system you need a Java
+compiler\footnote{Download the Java SE Development Kit (JDK) from
+\url{http://java.sun.com/javase/downloads/index.jsp}.} and an FPGA
+compiler. In our case we use the free web edition of Quartus from
+Altera.\footnote{\url{http://www.altera.com/}} As we use \cmd{make}
+and the preprocessor from the GNU compiler collection,
+Cygwin\footnote{\url{http://www.cygwin.com/}} should be installed
+under Windows.
+
+When all tools are setup correctly\footnote{Check at the command
+prompt that \cmd{javac} is in the path.} a simple \cmd{make} should
+build the tools, the processor, compile the ``Hello World" example,
+configure the FPGA and download the application. The whole build
+process will take a few minutes. After typing
+\begin{verbatim}
+    make
+\end{verbatim}
+you see a lot of messages from the various tools. However, the last
+lines should be actual messages received from JOP. It should look
+similar to the following:
+\begin{verbatim}
+    JOP start V 20080821
+    60 MHz, 1024 KB RAM, 1 CPUs
+    Hello World from JOP!
+
+    JVM exit!
+\end{verbatim}
+Note that JOP prints some internal information, such as version and
+memory size, at startup. After that, the message ``Hello World from
+JOP!" can be seen. Our first program runs on JOP!
+
+As a next step, locate the Hello World example in the source
+tree\footnote{\dirent{.../jop/java/target/src/test/test/HelloWorld.java}}
+and change the output message. The tools and the processor have been
+built already. So we do not need to compile everything from scratch.
+Use the following make target to just compile the Java application
+and download the processor and the application:
+\begin{verbatim}
+    make japp
+\end{verbatim}
+The compile process should now be faster and the output similar to
+before.
+
+The Hello World application is the default target in the Makefile.
+See Chapter~\ref{chap:build} for a description how this target can be
+changed. In case you use a different FPGA board you can find
+information on how to change the build process also in
+Chapter~\ref{chap:build}.
+
+\subsection{The Design Structure}
+
+Browsing the source tree of JOP can give the impression that the
+design is complex. However, the basic structure is not that complex.
+The design consists of three entities:
+\begin{enumerate}
+    \item The processor JOP
+    \item Supporting tools
+    \item The Java library and applications
+\end{enumerate}
+
+The different entities are also reflected during the configuration
+and download process. The download is a two step process:
+\begin{enumerate}
+    \item Configuration of the FPGA: JOP is downloaded via a FPGA
+        download cable (e.g., ByteBlaster on the PCs parallel
+        port). After FPGA configuration the processor
+        automatically starts and listens to the second channel
+        (the serial line) for the software download.
+    \item Java application download: the compiled and linked
+    application is downloaded usually via a serial line. JOP stores
+    the application in the main memory and starts execution at
+    \code{main()} after the download.
+\end{enumerate}
+
+Further details of the source structure can be found in
+Section~\ref{sec:directory}.
+
+\section{A Short History}
+
+The first version of JOP was created in 2000 based on the adaptation
+of earlier processor designs created between 1995 and 2000. The first
+version was written in Altera's proprietary AHDL language. The first
+\emph{program} (3 bytecode instructions) ran on JOP on October 2,
+2000. The first approach was a general purpose accumulator/register
+machine with 16-bit instructions, 32-bit registers, and a pipeline
+length of 3. It used the on-chip block memory to implement (somehow
+unusual) 1024 registers.
+
+The JVM was implemented in the assembler of that machine. That
+concept was similar to the microcode in the current JOP version. The
+decoding of the bytecode was performed by a long jump table. In the
+best case (assuming a local, single cycle memory) a simple bytecode
+(e.g.\ \code{iadd}) took 12 cycles for fetch and decode and
+additional 11 cycles for execution.
+
+
+A redesign followed in April 2001, now coded in VHDL. The second
+version of JOP introduced features to speed up the implementation of
+the JVM with specific instructions for the stack access and a
+dedicated stack pointer. The register file was reduced to 16 entries
+and the instruction width reduced to 8 bits. The pipeline contained 5
+stages and special support for decoding bytecode instructions was
+added -- a first version of the dynamic bytecode to microcode address
+translation as it is used in the current version of JOP. The
+enhancements within JOP2 resulted in the reduction of the execution
+time for a simple bytecode to 3 cycles. A great enhancement compared
+to the 23 cycles in JOP1.
+
+The next redesign (JOP3) followed in June 2001. The challenge was to
+execute simple bytecodes fully pipelined in a single cycle. The
+microcode instruction set was changed to implement a stack machine
+and the execution stage combined with the on-chip stack cache.
+Microcode instructions where coded in 16 bit and the pipeline was
+reduced to four stages. JOP3 is the basis of JOP as it is described
+in this handbook. The later changes have not been so radical to call
+them a redesign.
+
+The first real-world application of JOP was in the project
+\emph{Kippfahrleitung} (see Section~\ref{sec:app:kfl}). At the start
+of the project (October 2001) JOP could only execute a single static
+method stored in the on-chip memory. The project greatly pushed the
+development of JOP. After successful deployment of the JOP-based
+control system in the field, several projects followed (TeleAlarm,
+Lift, the railway control system). The source of the commercial
+applications is part of the JOP distribution. Some of these
+applications are now used as a test bench for embedded Java
+performance and to benchmark WCET analysis tools.
+
+More details and the source code of
+JOP1\footnote{\url{http://www.jopdesign.com/jop1.jsp}},
+JOP2\footnote{\url{http://www.jopdesign.com/jop2.jsp}} and the first
+JOP3\footnote{\url{http://www.jopdesign.com/jop3.jsp}} version are
+available on the web site.
+
+
+\section{JOP Features}
+
+This book presents a hardware implementation of the Java virtual
+machine (JVM), targeting small embedded systems with real-time
+constraints. JOP is designed from the ground up with time-predictable
+execution of Java bytecode as a major design goal. All functional
+units, and especially the interactions between them, are carefully
+designed to avoid any time dependency between bytecodes.
+
+JOP is a stack computer with its own instruction set, called
+microcode in this book. Java bytecodes are translated into microcode
+instructions or sequences of microcode. The difference between the
+JVM and JOP is best described as the following:
+\begin{quote}
+The JVM is a CISC stack architecture, whereas JOP is a RISC stack
+architecture.
+\end{quote}
+
+The architectural features and highlights of JOP are:
+
+\begin{itemize}
+
+    \item Dynamic translation of the CISC Java bytecodes to a
+        RISC, stack based instruction set (the microcode) that
+        can be executed in a 3 stage pipeline.
+
+    \item The translation takes exactly one cycle per bytecode
+        and is therefore pipelined. Compared to other forms of
+        dynamic code translation the proposed translation does
+        not add any variable latency to the execution time and is
+        therefore time predictable.
+
+    \item Interrupts are inserted in the translation stage as
+        special bytecodes and are transparent to the microcode
+        pipeline.
+
+    \item The short pipeline (4 stages) results in short
+        conditional branch delays and a hard to analyze branch
+        prediction logic or branch target buffer can be avoided.
+
+    \item Simple execution stage with the two topmost stack
+        elements as discrete registers. No write back stage or
+        forwarding logic is needed.
+
+    \item Constant execution time (one cycle) for all microcode
+        instructions. The microcode pipeline never stalls. Loads
+        and stores of object fields are handled explicitly.
+
+    \item No time dependencies between bytecodes result in a
+        simple processor model for the low-level WCET analysis.
+
+    \item Time predictable instruction cache that caches whole
+        methods. Only invoke and return instruction can result in
+        a cache miss. All other instructions are guaranteed cache
+        hits.
+
+    \item Time predictable data cache for local variables and the
+        operand stack. Access to local variables is a guaranteed
+        hit and no pipeline stall can happen. Stack cache fill
+        and spill is under microcode control and analyzable.
+
+    \item No prefetch buffers or store buffers that can introduce
+        unbound time dependencies of instructions. Even simple
+        processors can contain an instruction prefetch buffer
+        that prohibits exact WCET values. The design of the
+        method cache and the translation unit avoids the variable
+        latency of a prefetch buffer.
+
+    \item Good average case performance compared to other non
+        real-time Java processors.
+
+    \item Avoidance of hard to analyze architectural features
+        results in a very small design. Therefore an available
+        real estate can be used for a chip multi-processor
+        solution.
+
+    \item JOP is the smallest hardware implementation of the JVM
+        available to date. This fact enables usage of low-cost
+        FPGAs in embedded systems. The resource usage of JOP can
+        be configured to trade size against performance for
+        different application domains.
+
+
+    \item JOP is actually in use in several real-world
+        applications showing that a Java based embedded system
+        implemented in an FPGA is a viable option.
+
+\end{itemize}
+
+JOP is implemented as a soft-core in a field programmable gate array
+(FPGA) giving a lot of flexibility for the overall hardware design.
+The processor can easily be extended by peripheral components inside
+the same chip. Therefore, it is possible to customize the solution
+exactly to the needs of the system.
+
+
+\section{Is JOP the Solution for Your Problem?}
+
+I had a lot of fun, and still have, developing and using JOP.
+However, should you use JOP? JOP is a processor design intended as a
+time predictable solution for hard real-time systems. If your
+application or research focus is on those systems and you prefer Java
+as programming language, JOP is the right choice. If you are
+interested in larger, dynamic systems, JOP is the wrong choice. If
+average performance is important for you and you do not care about
+worst-case performance other solutions will probably do a better job.
+
+\section{Outline of the Book}
+
+Chapter~\ref{chap:build} gives a detailed introduction into the
+design flow of JOP. It explains how the individual parts are compiled
+and which files have to be changed when you want to extend JOP or
+adapt it to a new hardware platform. The chapter is concluded by an
+exercise to explore the different steps in the design flow.
+
+Chapter~\ref{chap:java} provides background information on the Java
+programming language, the execution environment, and the Java virtual
+machine, for Java applications. If you are already familiar with Java
+and the JVM, feel free to skip this chapter.
+
+Chapter~\ref{chap:arch} is the main chapter in which the architecture
+of JOP is described. The motivation behind different design decisions
+is given. A Java processor alone is not a complete JVM.
+Chapter~\ref{chap:runtime} describes the runtime environment on top
+of JOP, including the definition of a real-time profile for Java and
+the description of the scheduler in Java.
+
+Garbage collection (GC) is an important part of the Java technology.
+Even in real-time systems new real-time garbage collectors emerge.
+In Chapter~\ref{chap:rtgc} the formulas to calculate the correct
+scheduling of the GC thread are given and the implementation of the
+real-time GC for JOP is explained.
+
+In Chapter~\ref{chap:wcet} WCET analysis of the individual Java
+bytecodes is performed. It is shown how these bytecode instruction
+timings form the basis of WCET analysis of Java applications.
+
+JOP uses a simple and efficient system-on-chip interconnection
+called SimpCon to connect the memory controller and peripheral
+devices to the processor pipeline. The definition of SimpCon and the
+rationale behind the SimpCon specification is given in
+Chapter~\ref{chap:simpcon}.
+
+%Chapter~\ref{chap:ejip} sketches the implementation of an embedded
+%TCP/IP stack called \code{ejip}.
+
+In Chapter~\ref{chap:results}, JOP is evaluated with respect to size
+and performance. This is followed by a description of some
+commercial real-world applications of JOP.
+
+Other hardware implementations of the JVM are presented in
+Chapter~\ref{chap:related}. Different hardware solutions from both
+academia and industry for accelerating Java in embedded systems are
+analyzed.
+
+Finally, in Chapter~\ref{chap:conclusions}, the work is summarized
+and the major contributions are presented. This chapter concludes
+with directions for future research using JOP and real-time Java.
+
+A more theoretical treatment of the design of JOP can be found in the
+PhD thesis \cite{jop:thesis}, which is also available as book
+\cite{jop:thesis:book}.

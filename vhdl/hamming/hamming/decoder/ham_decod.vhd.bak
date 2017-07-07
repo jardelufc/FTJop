@@ -1,0 +1,112 @@
+--------------------------------------------------------------
+-- Arquivo:  ham_decod.vhd                              
+-- Data:  	 15/09/2008                                                      
+-- Autor: 	 David Viana
+--   * hamming code
+--   * data width: 8
+--   * Hamming bits: 4 
+--
+
+-----------------------------------------------------------------
+library IEEE;
+
+--use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_1164.all;
+--use IEEE.std_logic_arith.all;
+use ieee.numeric_std.all;
+
+entity  ham_decod is
+generic (jpc_width : integer:=12);
+port(
+		reset 		:in std_logic; 
+		tclk 			:in std_logic;
+		enable		:in std_logic;
+		data 			:in std_logic_vector (12 downto 1);
+		addr_in		:in std_logic_vector (jpc_width-1 downto 0);
+
+		addr_out		:out std_logic_vector (jpc_width-1 downto 0);
+		--ready			:out std_logic:= '0';
+		--error			:out std_logic:= '0';
+		Ham_out		:out std_logic_vector (7 downto 0)
+);
+
+end ham_decod;
+
+architecture behavior of  ham_decod is
+	signal E 		: std_logic_vector(jpc_width-1 downto 0);
+ 
+	begin
+	
+	addr_read : process(enable,tclk)
+	begin
+	if tclk = '0' then
+	
+		addr_out <= addr_in;
+
+	end if;
+	end process;
+		
+	process(addr_in,reset)
+	
+    variable D: std_logic_vector(11 downto 0);
+	 variable H1,H2,H3,H4: std_logic;
+	 variable temp : std_logic_vector(3 downto 0);
+	 variable position: natural;
+    variable NewHam: std_logic_vector(7 downto 0);
+
+	 begin
+	     
+	 D(11 downto 8):= Data(12 downto 9);
+	 D(7)				   := Data(4);
+	 D(6 downto 4)	:= Data(8 downto 6);
+	 D(3)				   := Data(3);
+	 D(2)      				:= Data(5);
+	 D(1 downto 0)	:= Data(2 downto 1);
+			
+	 if (tclk = '1' and reset = '1') then
+			NewHam := x"00";
+			--ready <= '0';
+			--error <= '0';
+			Ham_out <= NewHam;
+			
+	 elsif (enable = '1' and tclk = '1') then
+			
+			H1 := D(0) xor D(2) xor D(4) xor D(6) xor D(8) xor D(10);
+			
+			H2 := D(1) xor D(2) xor D(5) xor D(6) xor D(9) xor D(10);			
+			
+			H3 := D(3) xor D(4) xor D(5) xor D(6) xor D(11);	
+			
+			H4 := D(7) xor D(8) xor D(9) xor D(10) xor D(11);
+
+			if (H1 /= '0' or H2 /= '0' or H3 /= '0' or H4 /= '0')  then
+				
+				temp(3) := H4;
+				temp(2) := H3;
+				temp(1) := H2;
+				temp(0) := H1;
+				
+			   position := to_integer(unsigned(temp(3 downto 0)));--(8*H4) + (4*H3) + (2*H2) + (H1);
+				
+				if (D(position-1) = '1') then
+					D(position-1) := '0';
+				
+				else
+					D(position-1) := '1';
+				
+				end if;
+																				
+			end if;
+
+			NewHam(7 downto 4) := D(11 downto 8);
+			NewHam(3 downto 1) := D(6 downto 4);
+			NewHam(0)  			 := D(2);			
+			
+			--ready <= '1';
+			Ham_out <= NewHam;
+				
+	 end if;
+
+  end process;
+  
+end behavior;

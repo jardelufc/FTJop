@@ -1,0 +1,63 @@
+# //  ModelSim PE Student Edition 6.4c Dec  8 2008 
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# 
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim -do sim.do tb_jop 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_jop(tb)
+# Loading work.jop_types
+# Loading work.sc_pack
+# Loading work.jop_config(body)
+# Loading work.jop(rtl)
+# Loading work.pll(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.jopcpu(rtl)
+# Loading work.core(rtl)
+# Loading work.bcfetch(rtl)
+# Loading work.jtbl(rtl)
+# Loading work.bytecode(sim)
+# Loading work.fetch(rtl)
+# Loading work.rom(sim)
+# Loading work.offtbl(rtl)
+# Loading work.stack(rtl)
+# Loading work.shift(rtl)
+# Loading work.ram(sim)
+# Loading work.decode(rtl)
+# Loading work.extension(rtl)
+# Loading work.mul(rtl)
+# Loading work.mem_sc(rtl)
+# Loading work.cache(rtl)
+# Loading work.ham_top(behavioral)
+# Loading work.ham_enc(behavioral)
+# Loading ieee.math_real(body)
+# Loading work.ham_decod(behavior)
+# Loading work.jbc(sim)
+# Loading work.hnc(sim)
+# Loading work.crc(behavior)
+# Loading work.scio(rtl)
+# Loading work.sc_sys(rtl)
+# Loading work.intstate(rtl)
+# Loading work.sc_uart(sim)
+# Loading work.sc_mem_if(rtl)
+# Loading work.memory(sim)
+# do sim.do 
+# 1
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# load main memory... words: 32768
+# J
+# O

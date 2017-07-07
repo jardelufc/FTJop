@@ -1,0 +1,23 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.48 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/sc_ioparallel is now defined in a different file.  It was defined in "C:/David/jop3_v2/jop/vhdl/scio/sc_ioparallel.vhd", and is now defined in "C:/David/jop3_v21/jop/vhdl/scio/sc_ioparallel.vhd".
+WARNING:HDLParsers:3607 - Unit work/sc_ioparallel/rtl is now defined in a different file.  It was defined in "C:/David/jop3_v2/jop/vhdl/scio/sc_ioparallel.vhd", and is now defined in "C:/David/jop3_v21/jop/vhdl/scio/sc_ioparallel.vhd".
+Compiling vhdl file "C:/David/jop3_v21/jop/vhdl/scio/sc_ioparallel.vhd" in Library work.
+Architecture rtl of Entity sc_ioparallel is up to date.
+CPU : 0.44 / 0.92 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 111280 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

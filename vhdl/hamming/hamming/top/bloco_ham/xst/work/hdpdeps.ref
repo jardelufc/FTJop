@@ -1,0 +1,43 @@
+V3 25
+FL C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd 2008/09/30.10:10:25 J.30
+EN work/ham_decod 1230816422 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd \
+      PB ieee/std_logic_1164 1163575071 PH ieee/NUMERIC_STD 1163575073
+AR work/ham_decod/behavior 1230816423 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd \
+      EN work/ham_decod 1230816422
+FL C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd 2008/09/30.11:10:07 J.30
+EN work/ham_enc 1230816420 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd \
+      PB ieee/std_logic_1164 1163575071 PB ieee/std_logic_arith 1163575072 \
+      PB ieee/STD_LOGIC_UNSIGNED 1163575073
+AR work/ham_enc/Behavioral 1230816421 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd EN work/ham_enc 1230816420
+FL C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd 2008/09/30.10:39:37 J.30
+EN work/bhc 1230816426 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd \
+      PB ieee/std_logic_1164 1163575071 PH ieee/NUMERIC_STD 1163575073
+AR work/bhc/sim 1230816427 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd \
+      EN work/bhc 1230816426
+FL C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd 2008/09/30.10:37:02 J.30
+EN work/bhc32 1230816424 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd \
+      PB ieee/std_logic_1164 1163575071 PH ieee/NUMERIC_STD 1163575073
+AR work/bhc32/sim 1230816425 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd \
+      EN work/bhc32 1230816424
+FL C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd 2009/01/01.10:26:28 J.30
+EN work/ham_top 1230816428 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd \
+      PB ieee/std_logic_1164 1163575071 PB ieee/std_logic_arith 1163575072 \
+      PB ieee/STD_LOGIC_UNSIGNED 1163575073
+AR work/ham_top/Behavioral 1230816429 \
+      FL C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd EN work/ham_top 1230816428 \
+      CP ham_enc CP ham_decod CP bhc32 CP bhc
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" 2008/09/30.10:10:25 J.30
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd" 2008/09/30.10:51:59 J.30
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd" 2008/09/30.10:39:37 J.30
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/../ham_top.vhd" 2008/09/24.12:49:18 J.30
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd" 2008/09/30.10:37:02 J.30
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/ham_top.vhd" 2008/09/30.10:15:11 J.30

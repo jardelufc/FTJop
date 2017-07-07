@@ -1,0 +1,1 @@
+xst -ise "C:/LESC/Hamming/hamming(15-09)/encoder/ham_encod/ham_encod.ise" -intstyle ise -ifn ham_enc.xst -ofn ham_enc.syr

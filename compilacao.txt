@@ -1,0 +1,24 @@
+rm -rf java/tools/dist
+mkdir java/tools/dist
+mkdir java/tools/dist/lib
+mkdir java/tools/dist/classes
+javac -g -d java/tools/dist/classes 
+-classpath 
+
+java/lib/bcel-5.1.jar\;
+java/lib/jakarta-regexp-1.3.jar\;
+java/lib/RXTXcomm.jar\;
+java/lib/lpsolve55j.jar\;
+java/lib/log4j-1.2.15.jar\;
+java/lib/jgrapht-jdk1.5.jar\;
+java/lib/velocity-1.5.jar\;
+java/lib/velocity-dep-1.5.jar -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/*.java
+
+javac -g -d java/tools/dist/classes -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/com/jopdesign/build/*.java
+javac -g -d java/tools/dist/classes -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/com/jopdesign/tools/*.java
+javac -g -d java/tools/dist/classes -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/com/jopdesign/wcet/*.java
+javac -g -d java/tools/dist/classes -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/com/jopdesign/dfa/*.java
+javac -g -d java/tools/dist/classes -sourcepath java/tools/src\;java/target/src/common -encoding Latin1 java/tools/src/com/jopdesign/wcet08/*.java
+cp java/tools/src/com/jopdesign/wcet08/report/*.vm java/tools/dist/classes/com/jopdesign/wcet08/report
+#make joptimizer -e TOOLS_JFLAGS="-g -d java/tools/dist/classes -classpath java/lib/bcel-5.1.jar\;java/lib/jakarta-regexp-1.3.jar\;java/lib/RXTXcomm.jar\;java/lib/lpsolve55j.jar\;java/lib/log4j-1.2.15.jar\;java/lib/jgrapht-jdk1.5.jar\;java/lib/velocity-1.5.jar\;java/lib/velocity-dep-1.5.jar -sourcepath java/tools/src\;java/target/src/common -encoding Latin1" TOOLS="java/tools"
+cd java/tools/dist/classes && jar cf ../lib/jop-tools.jar *

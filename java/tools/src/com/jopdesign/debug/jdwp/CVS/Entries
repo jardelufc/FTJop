@@ -1,0 +1,20 @@
+/CommunicationInterface.java/1.1/Wed Oct  3 00:50:33 2007//
+/JDWPEventManager.java/1.1/Wed Oct  3 00:50:33 2007//
+/JOPDebugChannel.java/1.7/Fri Jan 18 14:02:38 2008//
+/JOPDebugInterface.java/1.2/Thu Nov 29 14:59:48 2007//
+/JOPDebugManager.java/1.1/Wed Oct  3 00:50:33 2007//
+/MethodTable.java/1.3/Thu Oct 16 00:02:02 2008//
+/PacketInputQueueManager.java/1.2/Fri Nov 23 04:49:25 2007//
+/PacketOutputQueueManager.java/1.1/Wed Oct  3 00:50:33 2007//
+/SymbolManager.java/1.4/Tue Dec 18 02:31:27 2007//
+/SymbolTable.java/1.7/Thu Oct 16 00:02:02 2008//
+D/bcel////
+D/constants////
+D/event////
+D/handler////
+D/io////
+D/jop////
+D/model////
+D/sniffer////
+D/test////
+D/util////

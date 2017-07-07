@@ -1,0 +1,55 @@
+Release 9.1i Map J.30
+Xilinx Map Application Log File for Design 'jop'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx91i\bin\nt\map.exe -ise
+C:/David/jop3_ham_crc/jop/xilinx/s3sk/jop.ise -intstyle ise -p xc3s200-ft256-5
+-cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.36 $
+Mapped Date    : Mon Apr 27 11:35:34 2009
+
+Mapping design into LUTs...
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy<7>11" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy<7>) has input
+   signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed.
+   See the trim report for details about why the input signal will become
+   undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<7>71"
+   (output signal=cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<7>_map23) has input
+   signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed.
+   See the trim report for details about why the input signal will become
+   undriven.
+
+Error found in mapping process, exiting...
+Errors found during the mapping phase.  Please see map report file for more
+details.  Output files will not be written.
+
+Design Summary
+--------------
+Number of errors   :   6
+Number of warnings :   1

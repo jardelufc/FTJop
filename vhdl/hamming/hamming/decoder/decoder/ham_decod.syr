@@ -1,0 +1,404 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.38 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.38 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: ham_decod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ham_decod.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ham_decod"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : ham_decod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : ham_decod.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" in Library work.
+Entity <ham_decod> compiled.
+Entity <ham_decod> (Architecture <behavior>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ham_decod> in library <work> (architecture <behavior>) with generics.
+	jpc_width = 12
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <ham_decod> in library <work> (Architecture <behavior>).
+	jpc_width = 12
+WARNING:Xst:819 - "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 39: The following signals are missing in the process sensitivity list:
+   reset, addr_in.
+WARNING:Xst:819 - "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 54: The following signals are missing in the process sensitivity list:
+   enable, data.
+INFO:Xst:2679 - Register <error> in unit <ham_decod> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ham_decod> analyzed. Unit <ham_decod> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ham_decod>.
+    Related source file is "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd".
+WARNING:Xst:646 - Signal <H1> is assigned but never used.
+WARNING:Xst:646 - Signal <H2> is assigned but never used.
+WARNING:Xst:646 - Signal <H3> is assigned but never used.
+WARNING:Xst:646 - Signal <H4> is assigned but never used.
+WARNING:Xst:646 - Signal <NewHam> is assigned but never used.
+WARNING:Xst:646 - Signal <D> is assigned but never used.
+WARNING:Xst:1780 - Signal <E> is never used or assigned.
+WARNING:Xst:646 - Signal <temp> is assigned but never used.
+WARNING:Xst:646 - Signal <position> is assigned but never used.
+WARNING:Xst:737 - Found 8-bit latch for signal <Ham_out>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ready>.
+WARNING:Xst:737 - Found 12-bit latch for signal <addr_out>.
+    Found 1-bit xor4 for signal <position$xor0000> created at line 84.
+    Found 1-bit xor4 for signal <position$xor0001> created at line 82.
+    Found 1-bit xor4 for signal <position$xor0002> created at line 80.
+    Found 1-bit xor6 for signal <position$xor0003> created at line 78.
+    Found 1-bit xor2 for signal <position$xor0004> created at line 84.
+    Found 1-bit xor2 for signal <position$xor0005> created at line 82.
+    Summary:
+	inferred   4 Xor(s).
+Unit <ham_decod> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 12-bit latch                                          : 1
+ 8-bit latch                                           : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 2
+ 1-bit xor4                                            : 3
+ 1-bit xor6                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 12-bit latch                                          : 1
+ 8-bit latch                                           : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 2
+ 1-bit xor4                                            : 3
+ 1-bit xor6                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ham_decod> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ham_decod, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ham_decod.ngr
+Top Level Output File Name         : ham_decod
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 49
+
+Cell Usage :
+# BELS                             : 41
+#      GND                         : 1
+#      LUT2                        : 4
+#      LUT3                        : 6
+#      LUT4                        : 28
+#      MUXF5                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 21
+#      LDCE                        : 21
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 47
+#      IBUF                        : 25
+#      OBUF                        : 22
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                      22  out of   1920     1%  
+ Number of 4 input LUTs:                38  out of   3840     0%  
+ Number of IOs:                         49
+ Number of bonded IOBs:                 49  out of    173    28%  
+    IOB Flip Flops:                     21
+ Number of GCLKs:                        2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+tclk                               | BUFGP                  | 1     |
+enable                             | BUFGP                  | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Ham_out_and0000(Ham_out_and00001:O)| NONE(ready)            | 21    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 13.700ns
+   Maximum output required time after clock: 6.141ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tclk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.169ns (Levels of Logic = 1)
+  Source:            enable (PAD)
+  Destination:       ready (LATCH)
+  Destination Clock: tclk falling
+
+  Data Path: enable to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O           21   0.357   1.288  enable_BUFGP (enable_BUFGP)
+     LDCE:GE                   0.524          ready
+    ----------------------------------------
+    Total                      2.169ns (0.881ns logic, 1.288ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'enable'
+  Total number of paths / destination ports: 2099 / 40
+-------------------------------------------------------------------------
+Offset:              13.700ns (Levels of Logic = 10)
+  Source:            data<8> (PAD)
+  Destination:       Ham_out_6 (LATCH)
+  Destination Clock: enable falling
+
+  Data Path: data<8> to Ham_out_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.715   1.201  data_8_IBUF (data_8_IBUF)
+     LUT2:I0->O            2   0.479   0.768  Mxor_position_xor0005_Result1 (position_xor0005)
+     LUT4:I3->O           10   0.479   1.259  Mxor_position_xor0002_xo<2>1 (position_xor0002)
+     LUT4:I0->O            3   0.479   1.066  D_mux0000111 (N13)
+     LUT3:I0->O            2   0.479   0.804  D_5_cmp_eq00001 (D_5_cmp_eq0000)
+     LUT4:I2->O            1   0.479   0.976  D_10_mux0001181 (D_10_mux00011_map27)
+     LUT3:I0->O            1   0.479   0.740  D_10_mux00011165 (D_10_mux00011_map51)
+     LUT3:I2->O            8   0.479   0.980  D_10_mux00011181 (N157)
+     LUT4:I2->O            1   0.479   0.704  D_10_mux00012_SW0 (N166)
+     LUT4:I3->O            1   0.479   0.000  D_10_mux00012 (D_10_mux0001)
+     LDCE:D                    0.176          Ham_out_6
+    ----------------------------------------
+    Total                     13.700ns (5.202ns logic, 8.498ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'tclk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            ready (LATCH)
+  Destination:       ready (PAD)
+  Source Clock:      tclk falling
+
+  Data Path: ready to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.681  ready (ready_OBUF)
+     OBUF:I->O                 4.909          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'enable'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            Ham_out_7 (LATCH)
+  Destination:       Ham_out<7> (PAD)
+  Source Clock:      enable falling
+
+  Data Path: Ham_out_7 to Ham_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.681  Ham_out_7 (Ham_out_7)
+     OBUF:I->O                 4.909          Ham_out_7_OBUF (Ham_out<7>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+CPU : 9.55 / 9.95 s | Elapsed : 9.00 / 10.00 s
+ 
+--> 
+
+Total memory usage is 139736 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

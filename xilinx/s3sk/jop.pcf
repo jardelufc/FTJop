@@ -1,0 +1,1178 @@
+//! **************************************************************************
+// Written by: Map J.30 on Thu Apr 23 09:17:57 2009
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "wd" LOCATE = SITE "K12" LEVEL 1;
+COMP "clk" LOCATE = SITE "T9" LEVEL 1;
+COMP "ram_noe" LOCATE = SITE "K4" LEVEL 1;
+COMP "ram_nwe" LOCATE = SITE "G3" LEVEL 1;
+COMP "ser_rxd" LOCATE = SITE "T13" LEVEL 1;
+COMP "ser_txd" LOCATE = SITE "R13" LEVEL 1;
+COMP "rama_d<0>" LOCATE = SITE "N7" LEVEL 1;
+COMP "rama_d<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "rama_d<2>" LOCATE = SITE "R6" LEVEL 1;
+COMP "rama_d<3>" LOCATE = SITE "T5" LEVEL 1;
+COMP "rama_d<4>" LOCATE = SITE "R5" LEVEL 1;
+COMP "rama_d<5>" LOCATE = SITE "C2" LEVEL 1;
+COMP "rama_d<6>" LOCATE = SITE "C1" LEVEL 1;
+COMP "rama_d<7>" LOCATE = SITE "B1" LEVEL 1;
+COMP "rama_d<8>" LOCATE = SITE "D3" LEVEL 1;
+COMP "rama_d<9>" LOCATE = SITE "P8" LEVEL 1;
+COMP "ramb_d<0>" LOCATE = SITE "P2" LEVEL 1;
+COMP "ramb_d<1>" LOCATE = SITE "N2" LEVEL 1;
+COMP "ramb_d<2>" LOCATE = SITE "M2" LEVEL 1;
+COMP "ramb_d<3>" LOCATE = SITE "K1" LEVEL 1;
+COMP "ramb_d<4>" LOCATE = SITE "J1" LEVEL 1;
+COMP "ramb_d<5>" LOCATE = SITE "G2" LEVEL 1;
+COMP "ramb_d<6>" LOCATE = SITE "E1" LEVEL 1;
+COMP "ramb_d<7>" LOCATE = SITE "D1" LEVEL 1;
+COMP "ramb_d<8>" LOCATE = SITE "D2" LEVEL 1;
+COMP "ramb_d<9>" LOCATE = SITE "E2" LEVEL 1;
+COMP "ram_addr<10>" LOCATE = SITE "G5" LEVEL 1;
+COMP "ram_addr<11>" LOCATE = SITE "H3" LEVEL 1;
+COMP "ram_addr<12>" LOCATE = SITE "H4" LEVEL 1;
+COMP "ram_addr<13>" LOCATE = SITE "J4" LEVEL 1;
+COMP "ram_addr<14>" LOCATE = SITE "J3" LEVEL 1;
+COMP "ram_addr<15>" LOCATE = SITE "K3" LEVEL 1;
+COMP "ram_addr<16>" LOCATE = SITE "K5" LEVEL 1;
+COMP "ram_addr<17>" LOCATE = SITE "L3" LEVEL 1;
+COMP "rama_ncs" LOCATE = SITE "P7" LEVEL 1;
+COMP "rama_nlb" LOCATE = SITE "P6" LEVEL 1;
+COMP "ramb_ncs" LOCATE = SITE "N5" LEVEL 1;
+COMP "ramb_nlb" LOCATE = SITE "P5" LEVEL 1;
+COMP "rama_nub" LOCATE = SITE "T4" LEVEL 1;
+COMP "ramb_nub" LOCATE = SITE "R4" LEVEL 1;
+COMP "ram_addr<0>" LOCATE = SITE "L5" LEVEL 1;
+COMP "ram_addr<1>" LOCATE = SITE "N3" LEVEL 1;
+COMP "ram_addr<2>" LOCATE = SITE "M4" LEVEL 1;
+COMP "ram_addr<3>" LOCATE = SITE "M3" LEVEL 1;
+COMP "ram_addr<4>" LOCATE = SITE "L4" LEVEL 1;
+COMP "ram_addr<5>" LOCATE = SITE "G4" LEVEL 1;
+COMP "ram_addr<6>" LOCATE = SITE "F3" LEVEL 1;
+COMP "ram_addr<7>" LOCATE = SITE "F4" LEVEL 1;
+COMP "ram_addr<8>" LOCATE = SITE "E3" LEVEL 1;
+COMP "ram_addr<9>" LOCATE = SITE "E4" LEVEL 1;
+COMP "rama_d<10>" LOCATE = SITE "F2" LEVEL 1;
+COMP "rama_d<11>" LOCATE = SITE "H1" LEVEL 1;
+COMP "rama_d<12>" LOCATE = SITE "J2" LEVEL 1;
+COMP "rama_d<13>" LOCATE = SITE "L2" LEVEL 1;
+COMP "rama_d<14>" LOCATE = SITE "P1" LEVEL 1;
+COMP "rama_d<15>" LOCATE = SITE "R1" LEVEL 1;
+COMP "ramb_d<10>" LOCATE = SITE "G1" LEVEL 1;
+COMP "ramb_d<11>" LOCATE = SITE "F5" LEVEL 1;
+COMP "ramb_d<12>" LOCATE = SITE "C3" LEVEL 1;
+COMP "ramb_d<13>" LOCATE = SITE "K2" LEVEL 1;
+COMP "ramb_d<14>" LOCATE = SITE "M1" LEVEL 1;
+COMP "ramb_d<15>" LOCATE = SITE "N1" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+PIN cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.A_pins<15> = BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.A" PINNAME CLKA;
+PIN cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.B_pins<15> = BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.B" PINNAME CLKB;
+PIN cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.A_pins<15> = BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.A" PINNAME
+        CLKA;
+PIN cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.B_pins<15> = BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.B" PINNAME
+        CLKB;
+PIN cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.A_pins<15> = BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.A" PINNAME
+        CLKA;
+PIN cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.B_pins<15> = BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.B" PINNAME
+        CLKB;
+TIMEGRP clk = BEL "int_res" BEL "res_cnt_0" BEL "res_cnt_1" BEL "res_cnt_2"
+        BEL "cmp_scm_state_FFd3" BEL "cmp_scm_state_FFd1" BEL
+        "cmp_scm_state_FFd2" BEL "cmp_scm_sc_mem_in.rd_data_31" BEL
+        "cmp_scm_sc_mem_in.rd_data_30" BEL "cmp_scm_sc_mem_in.rd_data_29" BEL
+        "cmp_scm_sc_mem_in.rd_data_28" BEL "cmp_scm_sc_mem_in.rd_data_27" BEL
+        "cmp_scm_sc_mem_in.rd_data_26" BEL "cmp_scm_sc_mem_in.rd_data_25" BEL
+        "cmp_scm_sc_mem_in.rd_data_24" BEL "cmp_scm_sc_mem_in.rd_data_23" BEL
+        "cmp_scm_sc_mem_in.rd_data_22" BEL "cmp_scm_sc_mem_in.rd_data_21" BEL
+        "cmp_scm_sc_mem_in.rd_data_20" BEL "cmp_scm_sc_mem_in.rd_data_19" BEL
+        "cmp_scm_sc_mem_in.rd_data_18" BEL "cmp_scm_sc_mem_in.rd_data_17" BEL
+        "cmp_scm_sc_mem_in.rd_data_16" BEL "cmp_scm_sc_mem_in.rd_data_15" BEL
+        "cmp_scm_sc_mem_in.rd_data_14" BEL "cmp_scm_sc_mem_in.rd_data_13" BEL
+        "cmp_scm_sc_mem_in.rd_data_12" BEL "cmp_scm_sc_mem_in.rd_data_11" BEL
+        "cmp_scm_sc_mem_in.rd_data_10" BEL "cmp_scm_sc_mem_in.rd_data_9" BEL
+        "cmp_scm_sc_mem_in.rd_data_8" BEL "cmp_scm_sc_mem_in.rd_data_7" BEL
+        "cmp_scm_sc_mem_in.rd_data_6" BEL "cmp_scm_sc_mem_in.rd_data_5" BEL
+        "cmp_scm_sc_mem_in.rd_data_4" BEL "cmp_scm_sc_mem_in.rd_data_3" BEL
+        "cmp_scm_sc_mem_in.rd_data_2" BEL "cmp_scm_sc_mem_in.rd_data_1" BEL
+        "cmp_scm_sc_mem_in.rd_data_0" BEL "cmp_scm_ram_ncs" BEL
+        "cmp_scm_dout_ena" BEL "cmp_scm_rd_data_ena" BEL "cmp_scm_ram_nwe" BEL
+        "cmp_scm_ram_noe" BEL "cmp_scm_ram_addr_17" BEL "cmp_scm_ram_addr_16"
+        BEL "cmp_scm_ram_addr_15" BEL "cmp_scm_ram_addr_14" BEL
+        "cmp_scm_ram_addr_13" BEL "cmp_scm_ram_addr_12" BEL
+        "cmp_scm_ram_addr_11" BEL "cmp_scm_ram_addr_10" BEL
+        "cmp_scm_ram_addr_9" BEL "cmp_scm_ram_addr_8" BEL "cmp_scm_ram_addr_7"
+        BEL "cmp_scm_ram_addr_6" BEL "cmp_scm_ram_addr_5" BEL
+        "cmp_scm_ram_addr_4" BEL "cmp_scm_ram_addr_3" BEL "cmp_scm_ram_addr_2"
+        BEL "cmp_scm_ram_addr_1" BEL "cmp_scm_ram_addr_0" BEL "cmp_scm_cnt_1"
+        BEL "cmp_scm_cnt_0" BEL "cmp_scm_ram_dout_31" BEL
+        "cmp_scm_ram_dout_30" BEL "cmp_scm_ram_dout_29" BEL
+        "cmp_scm_ram_dout_28" BEL "cmp_scm_ram_dout_27" BEL
+        "cmp_scm_ram_dout_26" BEL "cmp_scm_ram_dout_25" BEL
+        "cmp_scm_ram_dout_24" BEL "cmp_scm_ram_dout_23" BEL
+        "cmp_scm_ram_dout_22" BEL "cmp_scm_ram_dout_21" BEL
+        "cmp_scm_ram_dout_20" BEL "cmp_scm_ram_dout_19" BEL
+        "cmp_scm_ram_dout_18" BEL "cmp_scm_ram_dout_17" BEL
+        "cmp_scm_ram_dout_16" BEL "cmp_scm_ram_dout_15" BEL
+        "cmp_scm_ram_dout_14" BEL "cmp_scm_ram_dout_13" BEL
+        "cmp_scm_ram_dout_12" BEL "cmp_scm_ram_dout_11" BEL
+        "cmp_scm_ram_dout_10" BEL "cmp_scm_ram_dout_9" BEL
+        "cmp_scm_ram_dout_8" BEL "cmp_scm_ram_dout_7" BEL "cmp_scm_ram_dout_6"
+        BEL "cmp_scm_ram_dout_5" BEL "cmp_scm_ram_dout_4" BEL
+        "cmp_scm_ram_dout_3" BEL "cmp_scm_ram_dout_2" BEL "cmp_scm_ram_dout_1"
+        BEL "cmp_scm_ram_dout_0" BEL "cmp_scm_wait_state_3" BEL
+        "cmp_scm_wait_state_2" BEL "cmp_scm_wait_state_1" BEL
+        "cmp_scm_wait_state_0" BEL "cmp_io_cmp_ua_tsr_7" BEL
+        "cmp_io_cmp_ua_tsr_8" BEL "cmp_io_cmp_ua_tsr_9" BEL
+        "cmp_io_cmp_ua_rx_clk" BEL "cmp_io_cmp_ua_rf_wr" BEL
+        "cmp_io_cmp_ua_rd_data_1" BEL "cmp_io_cmp_ua_rd_data_0" BEL
+        "cmp_io_cmp_ua_rd_data_2" BEL "cmp_io_cmp_ua_rd_data_3" BEL
+        "cmp_io_cmp_ua_ncts_buf_0" BEL "cmp_io_cmp_ua_rx_clk_ena" BEL
+        "cmp_io_cmp_ua_rd_data_4" BEL "cmp_io_cmp_ua_rd_data_5" BEL
+        "cmp_io_cmp_ua_rd_data_6" BEL "cmp_io_cmp_ua_rd_data_7" BEL
+        "cmp_io_cmp_ua_tf_rd" BEL "cmp_io_cmp_ua_ua_rd" BEL
+        "cmp_io_cmp_ua_uart_tx_state_0" BEL "cmp_io_cmp_ua_tx_clk" BEL
+        "cmp_io_cmp_ua_tsr_0" BEL "cmp_io_cmp_ua_tsr_1" BEL
+        "cmp_io_cmp_ua_tsr_2" BEL "cmp_io_cmp_ua_tsr_3" BEL
+        "cmp_io_cmp_ua_tsr_4" BEL "cmp_io_cmp_ua_i0_0" BEL
+        "cmp_io_cmp_ua_i0_1" BEL "cmp_io_cmp_ua_i0_2" BEL "cmp_io_cmp_ua_i0_3"
+        BEL "cmp_io_cmp_ua_tsr_5" BEL "cmp_io_cmp_ua_tsr_6" BEL
+        "cmp_io_cmp_ua_ncts_buf_1" BEL "cmp_io_cmp_ua_ncts_buf_2" BEL
+        "cmp_io_cmp_ua_rx_buf_0" BEL "cmp_io_cmp_ua_rx_buf_1" BEL
+        "cmp_io_cmp_ua_rx_buf_2" BEL "cmp_io_cmp_ua_rsr_9" BEL
+        "cmp_io_cmp_ua_rsr_8" BEL "cmp_io_cmp_ua_rsr_7" BEL
+        "cmp_io_cmp_ua_rsr_6" BEL "cmp_io_cmp_ua_rsr_5" BEL
+        "cmp_io_cmp_ua_rsr_4" BEL "cmp_io_cmp_ua_rsr_3" BEL
+        "cmp_io_cmp_ua_rsr_2" BEL "cmp_io_cmp_ua_rsr_1" BEL
+        "cmp_io_cmp_ua_rsr_0" BEL "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_0" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_1" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_2" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_3" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_4" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_5" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_6" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_buf_7" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[0].f1_f" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_rd_prev" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_0" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_1" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_2" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_3" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_4" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_5" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_6" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_buf_7" BEL
+        "cmp_io_cmp_ua_cmp_rf_g1[1].f1_f" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_0" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_1" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_2" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_3" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_4" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_5" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_6" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_buf_7" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[0].f1_f" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_rd_prev" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_0" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_1" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_2" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_3" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_4" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_5" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_6" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_buf_7" BEL
+        "cmp_io_cmp_ua_cmp_tf_g1[1].f1_f" BEL
+        "cmp_io_cmp_ua_uart_rx_state_FFd2" BEL
+        "cmp_io_cmp_ua_uart_rx_state_FFd1" BEL "cmp_io_cmp_ua_clk16_0" BEL
+        "cmp_io_cmp_ua_clk16_1" BEL "cmp_io_cmp_ua_clk16_2" BEL
+        "cmp_io_cmp_ua_clk16_4" BEL "cmp_io_cmp_ua_i_0" BEL
+        "cmp_io_cmp_ua_i_1" BEL "cmp_io_cmp_ua_i_2" BEL "cmp_io_cmp_ua_i_3"
+        BEL "cmp_io_cmp_ua_clkrx_0" BEL "cmp_io_cmp_ua_clkrx_1" BEL
+        "cmp_io_cmp_ua_clkrx_2" BEL "cmp_io_cmp_ua_clkrx_3" BEL
+        "cmp_io_cmp_ua_clktx_0" BEL "cmp_io_cmp_ua_clktx_1" BEL
+        "cmp_io_cmp_ua_clktx_2" BEL "cmp_io_cmp_ua_clktx_3" BEL
+        "cmp_io_cmp_sys_lock_reqest" BEL "cmp_io_cmp_sys_exc_type_0" BEL
+        "cmp_io_cmp_sys_exc_type_1" BEL "cmp_io_cmp_sys_clearall" BEL
+        "cmp_io_cmp_sys_exc_type_2" BEL "cmp_io_cmp_sys_rd_data_0" BEL
+        "cmp_io_cmp_sys_exc_type_3" BEL "cmp_io_cmp_sys_rd_data_1" BEL
+        "cmp_io_cmp_sys_exc_type_4" BEL "cmp_io_cmp_sys_rd_data_2" BEL
+        "cmp_io_cmp_sys_exc_type_5" BEL "cmp_io_cmp_sys_irq_dly" BEL
+        "cmp_io_cmp_sys_int_ena" BEL "cmp_io_cmp_sys_rd_data_3" BEL
+        "cmp_io_cmp_sys_exc_type_6" BEL "cmp_io_cmp_sys_rd_data_4" BEL
+        "cmp_io_cmp_sys_exc_type_7" BEL "cmp_io_cmp_sys_rd_data_5" BEL
+        "cmp_io_cmp_sys_rd_data_6" BEL "cmp_io_cmp_sys_rd_data_10" BEL
+        "cmp_io_cmp_sys_rd_data_7" BEL "cmp_io_cmp_sys_rd_data_11" BEL
+        "cmp_io_cmp_sys_rd_data_8" BEL "cmp_io_cmp_sys_rd_data_12" BEL
+        "cmp_io_cmp_sys_rd_data_14" BEL "cmp_io_cmp_sys_rd_data_9" BEL
+        "cmp_io_cmp_sys_rd_data_13" BEL "cmp_io_cmp_sys_rd_data_15" BEL
+        "cmp_io_cmp_sys_rd_data_20" BEL "cmp_io_cmp_sys_rd_data_16" BEL
+        "cmp_io_cmp_sys_rd_data_21" BEL "cmp_io_cmp_sys_wd" BEL
+        "cmp_io_cmp_sys_rd_data_17" BEL "cmp_io_cmp_sys_rd_data_22" BEL
+        "cmp_io_cmp_sys_rd_data_18" BEL "cmp_io_cmp_sys_rd_data_23" BEL
+        "cmp_io_cmp_sys_rd_data_19" BEL "cmp_io_cmp_sys_rd_data_24" BEL
+        "cmp_io_cmp_sys_swreq_0" BEL "cmp_io_cmp_sys_mask_0" BEL
+        "cmp_io_cmp_sys_mask_1" BEL "cmp_io_cmp_sys_mask_2" BEL
+        "cmp_io_cmp_sys_rd_data_25" BEL "cmp_io_cmp_sys_rd_data_30" BEL
+        "cmp_io_cmp_sys_exc_pend" BEL "cmp_io_cmp_sys_swreq_1" BEL
+        "cmp_io_cmp_sys_rd_data_26" BEL "cmp_io_cmp_sys_rd_data_31" BEL
+        "cmp_io_cmp_sys_swreq_2" BEL "cmp_io_cmp_sys_rd_data_27" BEL
+        "cmp_io_cmp_sys_rd_data_28" BEL "cmp_io_cmp_sys_rd_data_29" BEL
+        "cmp_io_cmp_sys_timer_cnt_0" BEL "cmp_io_cmp_sys_timer_cnt_1" BEL
+        "cmp_io_cmp_sys_timer_cnt_2" BEL "cmp_io_cmp_sys_timer_cnt_3" BEL
+        "cmp_io_cmp_sys_timer_cnt_4" BEL "cmp_io_cmp_sys_timer_cnt_5" BEL
+        "cmp_io_cmp_sys_timer_cnt_6" BEL "cmp_io_cmp_sys_timer_cnt_7" BEL
+        "cmp_io_cmp_sys_timer_cnt_8" BEL "cmp_io_cmp_sys_timer_cnt_9" BEL
+        "cmp_io_cmp_sys_timer_cnt_10" BEL "cmp_io_cmp_sys_timer_cnt_11" BEL
+        "cmp_io_cmp_sys_timer_cnt_12" BEL "cmp_io_cmp_sys_timer_cnt_13" BEL
+        "cmp_io_cmp_sys_timer_cnt_14" BEL "cmp_io_cmp_sys_timer_cnt_15" BEL
+        "cmp_io_cmp_sys_timer_cnt_16" BEL "cmp_io_cmp_sys_timer_cnt_17" BEL
+        "cmp_io_cmp_sys_timer_cnt_18" BEL "cmp_io_cmp_sys_timer_cnt_19" BEL
+        "cmp_io_cmp_sys_timer_cnt_20" BEL "cmp_io_cmp_sys_timer_cnt_21" BEL
+        "cmp_io_cmp_sys_timer_cnt_22" BEL "cmp_io_cmp_sys_timer_cnt_23" BEL
+        "cmp_io_cmp_sys_timer_cnt_24" BEL "cmp_io_cmp_sys_timer_cnt_25" BEL
+        "cmp_io_cmp_sys_timer_cnt_26" BEL "cmp_io_cmp_sys_timer_cnt_27" BEL
+        "cmp_io_cmp_sys_timer_cnt_28" BEL "cmp_io_cmp_sys_timer_cnt_29" BEL
+        "cmp_io_cmp_sys_timer_cnt_30" BEL "cmp_io_cmp_sys_timer_cnt_31" BEL
+        "cmp_io_cmp_sys_exc_dly" BEL "cmp_io_cmp_sys_timer_dly" BEL
+        "cmp_io_cmp_sys_intnr_0" BEL "cmp_io_cmp_sys_intnr_1" BEL
+        "cmp_io_cmp_sys_gen_int[2].cis_flag" BEL
+        "cmp_io_cmp_sys_gen_int[1].cis_flag" BEL
+        "cmp_io_cmp_sys_gen_int[0].cis_flag" BEL "cmp_io_cmp_sys_pre_scale_0"
+        BEL "cmp_io_cmp_sys_clock_cnt_0" BEL "cmp_io_cmp_sys_clock_cnt_1" BEL
+        "cmp_io_cmp_sys_clock_cnt_2" BEL "cmp_io_cmp_sys_clock_cnt_3" BEL
+        "cmp_io_cmp_sys_clock_cnt_4" BEL "cmp_io_cmp_sys_clock_cnt_5" BEL
+        "cmp_io_cmp_sys_clock_cnt_6" BEL "cmp_io_cmp_sys_clock_cnt_7" BEL
+        "cmp_io_cmp_sys_clock_cnt_8" BEL "cmp_io_cmp_sys_clock_cnt_9" BEL
+        "cmp_io_cmp_sys_clock_cnt_10" BEL "cmp_io_cmp_sys_clock_cnt_11" BEL
+        "cmp_io_cmp_sys_clock_cnt_12" BEL "cmp_io_cmp_sys_clock_cnt_13" BEL
+        "cmp_io_cmp_sys_clock_cnt_14" BEL "cmp_io_cmp_sys_clock_cnt_15" BEL
+        "cmp_io_cmp_sys_clock_cnt_16" BEL "cmp_io_cmp_sys_clock_cnt_17" BEL
+        "cmp_io_cmp_sys_clock_cnt_18" BEL "cmp_io_cmp_sys_clock_cnt_19" BEL
+        "cmp_io_cmp_sys_clock_cnt_20" BEL "cmp_io_cmp_sys_clock_cnt_21" BEL
+        "cmp_io_cmp_sys_clock_cnt_22" BEL "cmp_io_cmp_sys_clock_cnt_23" BEL
+        "cmp_io_cmp_sys_clock_cnt_24" BEL "cmp_io_cmp_sys_clock_cnt_25" BEL
+        "cmp_io_cmp_sys_clock_cnt_26" BEL "cmp_io_cmp_sys_clock_cnt_27" BEL
+        "cmp_io_cmp_sys_clock_cnt_28" BEL "cmp_io_cmp_sys_clock_cnt_29" BEL
+        "cmp_io_cmp_sys_clock_cnt_30" BEL "cmp_io_cmp_sys_clock_cnt_31" BEL
+        "cmp_io_cmp_sys_pre_scale_1" BEL "cmp_io_cmp_sys_pre_scale_2" BEL
+        "cmp_io_cmp_sys_pre_scale_3" BEL "cmp_io_cmp_sys_pre_scale_4" BEL
+        "cmp_io_cmp_sys_pre_scale_7" BEL "cmp_io_cmp_sys_pre_scale_5" BEL
+        "cmp_io_cmp_sys_pre_scale_6" BEL "cmp_io_cmp_sys_us_cnt_0" BEL
+        "cmp_io_cmp_sys_us_cnt_1" BEL "cmp_io_cmp_sys_us_cnt_2" BEL
+        "cmp_io_cmp_sys_us_cnt_3" BEL "cmp_io_cmp_sys_us_cnt_4" BEL
+        "cmp_io_cmp_sys_us_cnt_5" BEL "cmp_io_cmp_sys_us_cnt_6" BEL
+        "cmp_io_cmp_sys_us_cnt_7" BEL "cmp_io_cmp_sys_us_cnt_8" BEL
+        "cmp_io_cmp_sys_us_cnt_9" BEL "cmp_io_cmp_sys_us_cnt_10" BEL
+        "cmp_io_cmp_sys_us_cnt_11" BEL "cmp_io_cmp_sys_us_cnt_12" BEL
+        "cmp_io_cmp_sys_us_cnt_13" BEL "cmp_io_cmp_sys_us_cnt_14" BEL
+        "cmp_io_cmp_sys_us_cnt_15" BEL "cmp_io_cmp_sys_us_cnt_16" BEL
+        "cmp_io_cmp_sys_us_cnt_17" BEL "cmp_io_cmp_sys_us_cnt_18" BEL
+        "cmp_io_cmp_sys_us_cnt_19" BEL "cmp_io_cmp_sys_us_cnt_20" BEL
+        "cmp_io_cmp_sys_us_cnt_21" BEL "cmp_io_cmp_sys_us_cnt_22" BEL
+        "cmp_io_cmp_sys_us_cnt_23" BEL "cmp_io_cmp_sys_us_cnt_24" BEL
+        "cmp_io_cmp_sys_us_cnt_25" BEL "cmp_io_cmp_sys_us_cnt_26" BEL
+        "cmp_io_cmp_sys_us_cnt_27" BEL "cmp_io_cmp_sys_us_cnt_28" BEL
+        "cmp_io_cmp_sys_us_cnt_29" BEL "cmp_io_cmp_sys_us_cnt_30" BEL
+        "cmp_io_cmp_sys_us_cnt_31" BEL "cmp_io_sel_reg_1" BEL
+        "cmp_io_sel_reg_0" BEL "cpm_cpu_cmp_mem_base_reg_0" BEL
+        "cpm_cpu_cmp_mem_base_reg_1" BEL "cpm_cpu_cmp_mem_base_reg_2" BEL
+        "cpm_cpu_cmp_mem_base_reg_3" BEL "cpm_cpu_cmp_mem_base_reg_4" BEL
+        "cpm_cpu_cmp_mem_base_reg_5" BEL "cpm_cpu_cmp_mem_base_reg_6" BEL
+        "cpm_cpu_cmp_mem_base_reg_7" BEL "cpm_cpu_cmp_mem_base_reg_8" BEL
+        "cpm_cpu_cmp_mem_base_reg_9" BEL "cpm_cpu_cmp_mem_base_reg_10" BEL
+        "cpm_cpu_cmp_mem_base_reg_11" BEL "cpm_cpu_cmp_mem_base_reg_12" BEL
+        "cpm_cpu_cmp_mem_base_reg_13" BEL "cpm_cpu_cmp_mem_base_reg_14" BEL
+        "cpm_cpu_cmp_mem_base_reg_15" BEL "cpm_cpu_cmp_mem_base_reg_16" BEL
+        "cpm_cpu_cmp_mem_base_reg_17" BEL "cpm_cpu_cmp_mem_base_reg_18" BEL
+        "cpm_cpu_cmp_mem_base_reg_19" BEL "cpm_cpu_cmp_mem_base_reg_20" BEL
+        "cpm_cpu_cmp_mem_base_reg_21" BEL "cpm_cpu_cmp_mem_base_reg_22" BEL
+        "cpm_cpu_cmp_mem_was_a_store" BEL "cpm_cpu_cmp_mem_index_0" BEL
+        "cpm_cpu_cmp_mem_index_1" BEL "cpm_cpu_cmp_mem_index_2" BEL
+        "cpm_cpu_cmp_mem_index_3" BEL "cpm_cpu_cmp_mem_index_4" BEL
+        "cpm_cpu_cmp_mem_index_5" BEL "cpm_cpu_cmp_mem_index_6" BEL
+        "cpm_cpu_cmp_mem_index_7" BEL "cpm_cpu_cmp_mem_index_8" BEL
+        "cpm_cpu_cmp_mem_index_9" BEL "cpm_cpu_cmp_mem_index_10" BEL
+        "cpm_cpu_cmp_mem_index_11" BEL "cpm_cpu_cmp_mem_index_12" BEL
+        "cpm_cpu_cmp_mem_index_13" BEL "cpm_cpu_cmp_mem_index_14" BEL
+        "cpm_cpu_cmp_mem_index_15" BEL "cpm_cpu_cmp_mem_index_16" BEL
+        "cpm_cpu_cmp_mem_index_17" BEL "cpm_cpu_cmp_mem_index_18" BEL
+        "cpm_cpu_cmp_mem_index_19" BEL "cpm_cpu_cmp_mem_index_20" BEL
+        "cpm_cpu_cmp_mem_index_21" BEL "cpm_cpu_cmp_mem_index_22" BEL
+        "cpm_cpu_cmp_mem_value_0" BEL "cpm_cpu_cmp_mem_value_1" BEL
+        "cpm_cpu_cmp_mem_value_2" BEL "cpm_cpu_cmp_mem_value_3" BEL
+        "cpm_cpu_cmp_mem_value_4" BEL "cpm_cpu_cmp_mem_value_5" BEL
+        "cpm_cpu_cmp_mem_value_6" BEL "cpm_cpu_cmp_mem_value_7" BEL
+        "cpm_cpu_cmp_mem_value_8" BEL "cpm_cpu_cmp_mem_value_9" BEL
+        "cpm_cpu_cmp_mem_value_10" BEL "cpm_cpu_cmp_mem_value_11" BEL
+        "cpm_cpu_cmp_mem_value_12" BEL "cpm_cpu_cmp_mem_value_13" BEL
+        "cpm_cpu_cmp_mem_value_14" BEL "cpm_cpu_cmp_mem_value_15" BEL
+        "cpm_cpu_cmp_mem_value_16" BEL "cpm_cpu_cmp_mem_value_17" BEL
+        "cpm_cpu_cmp_mem_value_18" BEL "cpm_cpu_cmp_mem_value_19" BEL
+        "cpm_cpu_cmp_mem_value_20" BEL "cpm_cpu_cmp_mem_value_21" BEL
+        "cpm_cpu_cmp_mem_value_22" BEL "cpm_cpu_cmp_mem_value_23" BEL
+        "cpm_cpu_cmp_mem_value_24" BEL "cpm_cpu_cmp_mem_value_25" BEL
+        "cpm_cpu_cmp_mem_value_26" BEL "cpm_cpu_cmp_mem_value_27" BEL
+        "cpm_cpu_cmp_mem_value_28" BEL "cpm_cpu_cmp_mem_value_29" BEL
+        "cpm_cpu_cmp_mem_value_30" BEL "cpm_cpu_cmp_mem_value_31" BEL
+        "cpm_cpu_cmp_mem_pos_reg_0" BEL "cpm_cpu_cmp_mem_pos_reg_1" BEL
+        "cpm_cpu_cmp_mem_pos_reg_2" BEL "cpm_cpu_cmp_mem_pos_reg_3" BEL
+        "cpm_cpu_cmp_mem_pos_reg_4" BEL "cpm_cpu_cmp_mem_pos_reg_5" BEL
+        "cpm_cpu_cmp_mem_pos_reg_6" BEL "cpm_cpu_cmp_mem_pos_reg_7" BEL
+        "cpm_cpu_cmp_mem_pos_reg_8" BEL "cpm_cpu_cmp_mem_pos_reg_9" BEL
+        "cpm_cpu_cmp_mem_pos_reg_10" BEL "cpm_cpu_cmp_mem_pos_reg_11" BEL
+        "cpm_cpu_cmp_mem_pos_reg_12" BEL "cpm_cpu_cmp_mem_pos_reg_13" BEL
+        "cpm_cpu_cmp_mem_pos_reg_14" BEL "cpm_cpu_cmp_mem_pos_reg_15" BEL
+        "cpm_cpu_cmp_mem_pos_reg_16" BEL "cpm_cpu_cmp_mem_pos_reg_17" BEL
+        "cpm_cpu_cmp_mem_pos_reg_18" BEL "cpm_cpu_cmp_mem_pos_reg_19" BEL
+        "cpm_cpu_cmp_mem_pos_reg_20" BEL "cpm_cpu_cmp_mem_pos_reg_21" BEL
+        "cpm_cpu_cmp_mem_pos_reg_22" BEL "cpm_cpu_cmp_mem_translate_bit" BEL
+        "cpm_cpu_cmp_mem_addr_reg_0" BEL "cpm_cpu_cmp_mem_addr_reg_1" BEL
+        "cpm_cpu_cmp_mem_addr_reg_2" BEL "cpm_cpu_cmp_mem_addr_reg_3" BEL
+        "cpm_cpu_cmp_mem_addr_reg_4" BEL "cpm_cpu_cmp_mem_addr_reg_5" BEL
+        "cpm_cpu_cmp_mem_addr_reg_6" BEL "cpm_cpu_cmp_mem_addr_reg_7" BEL
+        "cpm_cpu_cmp_mem_addr_reg_8" BEL "cpm_cpu_cmp_mem_addr_reg_9" BEL
+        "cpm_cpu_cmp_mem_addr_reg_10" BEL "cpm_cpu_cmp_mem_addr_reg_11" BEL
+        "cpm_cpu_cmp_mem_addr_reg_12" BEL "cpm_cpu_cmp_mem_addr_reg_13" BEL
+        "cpm_cpu_cmp_mem_addr_reg_14" BEL "cpm_cpu_cmp_mem_addr_reg_15" BEL
+        "cpm_cpu_cmp_mem_addr_reg_16" BEL "cpm_cpu_cmp_mem_addr_reg_17" BEL
+        "cpm_cpu_cmp_mem_addr_reg_18" BEL "cpm_cpu_cmp_mem_addr_reg_19" BEL
+        "cpm_cpu_cmp_mem_addr_reg_20" BEL "cpm_cpu_cmp_mem_addr_reg_21" BEL
+        "cpm_cpu_cmp_mem_addr_reg_22" BEL "cpm_cpu_cmp_mem_cp_stopbit" BEL
+        "cpm_cpu_cmp_mem_state_bsy" BEL "cpm_cpu_cmp_mem_offset_reg_0" BEL
+        "cpm_cpu_cmp_mem_offset_reg_1" BEL "cpm_cpu_cmp_mem_offset_reg_2" BEL
+        "cpm_cpu_cmp_mem_offset_reg_3" BEL "cpm_cpu_cmp_mem_offset_reg_4" BEL
+        "cpm_cpu_cmp_mem_offset_reg_5" BEL "cpm_cpu_cmp_mem_offset_reg_6" BEL
+        "cpm_cpu_cmp_mem_offset_reg_7" BEL "cpm_cpu_cmp_mem_offset_reg_8" BEL
+        "cpm_cpu_cmp_mem_offset_reg_9" BEL "cpm_cpu_cmp_mem_offset_reg_10" BEL
+        "cpm_cpu_cmp_mem_offset_reg_11" BEL "cpm_cpu_cmp_mem_offset_reg_12"
+        BEL "cpm_cpu_cmp_mem_offset_reg_13" BEL
+        "cpm_cpu_cmp_mem_offset_reg_14" BEL "cpm_cpu_cmp_mem_offset_reg_15"
+        BEL "cpm_cpu_cmp_mem_offset_reg_16" BEL
+        "cpm_cpu_cmp_mem_offset_reg_17" BEL "cpm_cpu_cmp_mem_offset_reg_18"
+        BEL "cpm_cpu_cmp_mem_offset_reg_19" BEL
+        "cpm_cpu_cmp_mem_offset_reg_20" BEL "cpm_cpu_cmp_mem_offset_reg_21"
+        BEL "cpm_cpu_cmp_mem_offset_reg_22" BEL "cpm_cpu_cmp_mem_state_rd" BEL
+        "cpm_cpu_cmp_mem_inc_addr_reg" BEL "cpm_cpu_cmp_mem_state_wr" BEL
+        "cpm_cpu_cmp_mem_bc_len_0" BEL "cpm_cpu_cmp_mem_bc_len_1" BEL
+        "cpm_cpu_cmp_mem_bc_len_2" BEL "cpm_cpu_cmp_mem_bc_len_3" BEL
+        "cpm_cpu_cmp_mem_bc_len_4" BEL "cpm_cpu_cmp_mem_bc_len_5" BEL
+        "cpm_cpu_cmp_mem_bc_len_6" BEL "cpm_cpu_cmp_mem_bc_len_7" BEL
+        "cpm_cpu_cmp_mem_bc_len_8" BEL "cpm_cpu_cmp_mem_bc_len_9" BEL
+        "cpm_cpu_cmp_mem_bc_wr_addr_0" BEL "cpm_cpu_cmp_mem_bc_wr_addr_1" BEL
+        "cpm_cpu_cmp_mem_bc_wr_addr_2" BEL "cpm_cpu_cmp_mem_bc_wr_addr_3" BEL
+        "cpm_cpu_cmp_mem_bc_wr_addr_4" BEL "cpm_cpu_cmp_mem_bc_wr_addr_5" BEL
+        "cpm_cpu_cmp_mem_bc_wr_addr_6" BEL "cpm_cpu_cmp_mem_bc_wr_addr_7" BEL
+        "cpm_cpu_cmp_mem_bc_wr_addr_8" PIN
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.A_pins<15>" PIN
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache8bits_cmp_jbc.B_pins<15>" BEL
+        "cpm_cpu_cmp_mem_state_FFd24" BEL "cpm_cpu_cmp_mem_state_FFd18" BEL
+        "cpm_cpu_cmp_mem_state_FFd2" BEL "cpm_cpu_cmp_mem_state_FFd36" BEL
+        "cpm_cpu_cmp_mem_state_FFd35" BEL "cpm_cpu_cmp_mem_state_FFd34" BEL
+        "cpm_cpu_cmp_mem_state_FFd33" BEL "cpm_cpu_cmp_mem_state_FFd32" BEL
+        "cpm_cpu_cmp_mem_state_FFd31" BEL "cpm_cpu_cmp_mem_state_FFd29" BEL
+        "cpm_cpu_cmp_mem_state_FFd28" BEL "cpm_cpu_cmp_mem_state_FFd30" BEL
+        "cpm_cpu_cmp_mem_state_FFd27" BEL "cpm_cpu_cmp_mem_state_FFd26" BEL
+        "cpm_cpu_cmp_mem_state_FFd25" BEL "cpm_cpu_cmp_mem_state_FFd23" BEL
+        "cpm_cpu_cmp_mem_state_FFd22" BEL "cpm_cpu_cmp_mem_state_FFd20" BEL
+        "cpm_cpu_cmp_mem_state_FFd19" BEL "cpm_cpu_cmp_mem_state_FFd21" BEL
+        "cpm_cpu_cmp_mem_state_FFd17" BEL "cpm_cpu_cmp_mem_state_FFd16" BEL
+        "cpm_cpu_cmp_mem_state_FFd15" BEL "cpm_cpu_cmp_mem_state_FFd14" BEL
+        "cpm_cpu_cmp_mem_state_FFd13" BEL "cpm_cpu_cmp_mem_state_FFd11" BEL
+        "cpm_cpu_cmp_mem_state_FFd10" BEL "cpm_cpu_cmp_mem_state_FFd12" BEL
+        "cpm_cpu_cmp_mem_state_FFd9" BEL "cpm_cpu_cmp_mem_state_FFd8" BEL
+        "cpm_cpu_cmp_mem_state_FFd7" BEL "cpm_cpu_cmp_mem_state_FFd6" BEL
+        "cpm_cpu_cmp_mem_state_FFd5" BEL "cpm_cpu_cmp_mem_state_FFd4" BEL
+        "cpm_cpu_cmp_mem_state_FFd1" BEL "cpm_cpu_cmp_mem_state_FFd3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_state_FFd1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_state_FFd2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_rdy" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_in_cache" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_block_addr_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_block_addr_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_block_addr_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_block_addr_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_8_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_9_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_7_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_6_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_5_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_4_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_2_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_1_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_3_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_0_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_15_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_14_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_13_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_11_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_12_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_17" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_16" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_15" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_14" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_11" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_9" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_8" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_7" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_6" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_5" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_4" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_3" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_2" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_tag_10_0" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_12" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_13" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_10" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_clr_val_11" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_31" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_30" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_29" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_28" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_27" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_26" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_25" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_24" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_23" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_22" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_21" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_20" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_19" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_18" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_17" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_16" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_15" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_14" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_13" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_12" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_11" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_10" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_9" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_data_out_0" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_15" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_14" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_13" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_12" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_11" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_10" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_9" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_Ham_out_0" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_addr_out_0" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_en" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_15" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_14" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_13" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_12" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_11" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_10" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_9" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_0" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_10" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_9" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_0" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_addr_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_8" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_9" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_10" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_11" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_12" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_13" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_14" BEL
+        "cpm_cpu_cmp_core_cmp_stk_opddly_15" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_0" BEL "cpm_cpu_cmp_core_cmp_stk_a_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_2" BEL "cpm_cpu_cmp_core_cmp_stk_a_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_4" BEL "cpm_cpu_cmp_core_cmp_stk_a_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_6" BEL "cpm_cpu_cmp_core_cmp_stk_a_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_8" BEL "cpm_cpu_cmp_core_cmp_stk_a_9" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_10" BEL "cpm_cpu_cmp_core_cmp_stk_a_11"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_12" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_13" BEL "cpm_cpu_cmp_core_cmp_stk_a_14"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_15" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_16" BEL "cpm_cpu_cmp_core_cmp_stk_a_17"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_18" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_19" BEL "cpm_cpu_cmp_core_cmp_stk_a_20"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_21" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_22" BEL "cpm_cpu_cmp_core_cmp_stk_a_23"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_24" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_25" BEL "cpm_cpu_cmp_core_cmp_stk_a_26"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_27" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_28" BEL "cpm_cpu_cmp_core_cmp_stk_a_29"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_30" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_31" BEL "cpm_cpu_cmp_core_cmp_stk_b_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_1" BEL "cpm_cpu_cmp_core_cmp_stk_b_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_3" BEL "cpm_cpu_cmp_core_cmp_stk_b_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_5" BEL "cpm_cpu_cmp_core_cmp_stk_b_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_7" BEL "cpm_cpu_cmp_core_cmp_stk_b_8" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_9" BEL "cpm_cpu_cmp_core_cmp_stk_b_10" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_11" BEL "cpm_cpu_cmp_core_cmp_stk_b_12"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_13" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_14" BEL "cpm_cpu_cmp_core_cmp_stk_b_15"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_16" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_17" BEL "cpm_cpu_cmp_core_cmp_stk_b_18"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_19" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_20" BEL "cpm_cpu_cmp_core_cmp_stk_b_21"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_22" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_23" BEL "cpm_cpu_cmp_core_cmp_stk_b_24"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_25" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_26" BEL "cpm_cpu_cmp_core_cmp_stk_b_27"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_28" BEL
+        "cpm_cpu_cmp_core_cmp_stk_b_29" BEL "cpm_cpu_cmp_core_cmp_stk_b_30"
+        BEL "cpm_cpu_cmp_core_cmp_stk_b_31" BEL
+        "cpm_cpu_cmp_core_cmp_stk_sp_ov" BEL "cpm_cpu_cmp_core_cmp_stk_ar_0"
+        BEL "cpm_cpu_cmp_core_cmp_stk_ar_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_ar_2" BEL "cpm_cpu_cmp_core_cmp_stk_ar_3"
+        BEL "cpm_cpu_cmp_core_cmp_stk_ar_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_ar_5" BEL "cpm_cpu_cmp_core_cmp_stk_ar_6"
+        BEL "cpm_cpu_cmp_core_cmp_stk_ar_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp0_0" BEL "cpm_cpu_cmp_core_cmp_stk_vp0_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp0_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp0_3" BEL "cpm_cpu_cmp_core_cmp_stk_vp0_4"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp0_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp0_6" BEL "cpm_cpu_cmp_core_cmp_stk_vp0_7"
+        BEL "cpm_cpu_cmp_core_cmp_stk_immval_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_8" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_9" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_10" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_11" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_12" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_13" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_14" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_15" BEL
+        "cpm_cpu_cmp_core_cmp_stk_immval_16" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp1_0" BEL "cpm_cpu_cmp_core_cmp_stk_vp1_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp1_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp1_3" BEL "cpm_cpu_cmp_core_cmp_stk_vp1_4"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp1_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp1_6" BEL "cpm_cpu_cmp_core_cmp_stk_vp1_7"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp2_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp2_2" BEL "cpm_cpu_cmp_core_cmp_stk_vp2_3"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp2_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp2_5" BEL "cpm_cpu_cmp_core_cmp_stk_vp2_6"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp2_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp3_1" BEL "cpm_cpu_cmp_core_cmp_stk_vp3_2"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp3_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp3_4" BEL "cpm_cpu_cmp_core_cmp_stk_vp3_5"
+        BEL "cpm_cpu_cmp_core_cmp_stk_vp3_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vp3_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_vpadd_7" BEL "cpm_cpu_cmp_core_cmp_stk_sp_7"
+        BEL "cpm_cpu_cmp_core_cmp_stk_sp_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_sp_5" BEL "cpm_cpu_cmp_core_cmp_stk_sp_4"
+        BEL "cpm_cpu_cmp_core_cmp_stk_sp_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_sp_2" BEL "cpm_cpu_cmp_core_cmp_stk_sp_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_sp_0" BEL
+        "cpm_cpu_cmp_core_cmp_stk_spp_7" BEL "cpm_cpu_cmp_core_cmp_stk_spp_6"
+        BEL "cpm_cpu_cmp_core_cmp_stk_spp_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_spp_4" BEL "cpm_cpu_cmp_core_cmp_stk_spp_3"
+        BEL "cpm_cpu_cmp_core_cmp_stk_spp_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_spp_1" BEL "cpm_cpu_cmp_core_cmp_stk_spp_0"
+        BEL "cpm_cpu_cmp_core_cmp_stk_spm_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_spm_6" BEL "cpm_cpu_cmp_core_cmp_stk_spm_5"
+        BEL "cpm_cpu_cmp_core_cmp_stk_spm_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_spm_3" BEL "cpm_cpu_cmp_core_cmp_stk_spm_2"
+        BEL "cpm_cpu_cmp_core_cmp_stk_spm_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wren_dly" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_7" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_6" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_5" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_4" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_3" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_wraddr_dly_0" BEL
+        "cpm_cpu_cmp_core_cmp_fch_pcwait" BEL "cpm_cpu_cmp_core_cmp_fch_pc_0"
+        BEL "cpm_cpu_cmp_core_cmp_fch_pc_1" BEL
+        "cpm_cpu_cmp_core_cmp_fch_pc_2" BEL "cpm_cpu_cmp_core_cmp_fch_pc_3"
+        BEL "cpm_cpu_cmp_core_cmp_fch_pc_4" BEL
+        "cpm_cpu_cmp_core_cmp_fch_pc_5" BEL "cpm_cpu_cmp_core_cmp_fch_pc_6"
+        BEL "cpm_cpu_cmp_core_cmp_fch_pc_7" BEL
+        "cpm_cpu_cmp_core_cmp_fch_pc_8" BEL "cpm_cpu_cmp_core_cmp_fch_pc_9"
+        BEL "cpm_cpu_cmp_core_cmp_fch_pc_10" BEL
+        "cpm_cpu_cmp_core_cmp_fch_ir_0" BEL "cpm_cpu_cmp_core_cmp_fch_ir_1"
+        BEL "cpm_cpu_cmp_core_cmp_fch_ir_2" BEL
+        "cpm_cpu_cmp_core_cmp_fch_ir_3" BEL "cpm_cpu_cmp_core_cmp_fch_ir_4"
+        BEL "cpm_cpu_cmp_core_cmp_fch_ir_5" BEL
+        "cpm_cpu_cmp_core_cmp_fch_ir_6" BEL "cpm_cpu_cmp_core_cmp_fch_ir_7"
+        BEL "cpm_cpu_cmp_core_cmp_fch_brdly_0" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_1" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_2" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_3" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_4" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_5" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_6" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_7" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_8" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_9" BEL
+        "cpm_cpu_cmp_core_cmp_fch_brdly_10" BEL
+        "cpm_cpu_cmp_core_cmp_fch_inst_Mram_mem.A" BEL
+        "cpm_cpu_cmp_core_cmp_fch_inst_Mram_mem1.A" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_0" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_1" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_2" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_3" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_4" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_5" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_6" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jinstr_7" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_0" BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_1"
+        BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_2" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_3" BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_4"
+        BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_5" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_6" BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_7"
+        BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_8" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_9" BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_10"
+        BEL "cpm_cpu_cmp_core_cmp_bcf_jpc_11" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_int_pend" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_tp_1" BEL "cpm_cpu_cmp_core_cmp_bcf_tp_2"
+        BEL "cpm_cpu_cmp_core_cmp_bcf_tp_3" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_0" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_exc_pend" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_1" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_2" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_5" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_3" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_4" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_6" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_7" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_10" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_11" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_12" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_0" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_1" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_2" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_3" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_4" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_5" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_6" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_7" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_8" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_9" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_10" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jpc_br_11" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_13" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_15" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_14" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_8" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jopd_9" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_0" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_1" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_2" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_3" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_4" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_5" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_6" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_7" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_8" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_9" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_10" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_jmp_addr_11" BEL
+        "cpm_cpu_cmp_ext_mem_scio_rd" BEL "cpm_cpu_cmp_ext_mem_in.bc_rd" BEL
+        "cpm_cpu_cmp_ext_mem_in.getfield" BEL "cpm_cpu_cmp_ext_mul_wr" BEL
+        "cpm_cpu_cmp_ext_mem_scio_wr" BEL "cpm_cpu_cmp_ext_mem_in.iaload" BEL
+        "cpm_cpu_cmp_ext_exr_0" BEL "cpm_cpu_cmp_ext_exr_1" BEL
+        "cpm_cpu_cmp_ext_exr_2" BEL "cpm_cpu_cmp_ext_exr_3" BEL
+        "cpm_cpu_cmp_ext_exr_4" BEL "cpm_cpu_cmp_ext_exr_5" BEL
+        "cpm_cpu_cmp_ext_exr_6" BEL "cpm_cpu_cmp_ext_exr_7" BEL
+        "cpm_cpu_cmp_ext_exr_8" BEL "cpm_cpu_cmp_ext_exr_9" BEL
+        "cpm_cpu_cmp_ext_exr_10" BEL "cpm_cpu_cmp_ext_exr_11" BEL
+        "cpm_cpu_cmp_ext_exr_12" BEL "cpm_cpu_cmp_ext_exr_13" BEL
+        "cpm_cpu_cmp_ext_exr_14" BEL "cpm_cpu_cmp_ext_exr_15" BEL
+        "cpm_cpu_cmp_ext_exr_16" BEL "cpm_cpu_cmp_ext_exr_17" BEL
+        "cpm_cpu_cmp_ext_exr_18" BEL "cpm_cpu_cmp_ext_exr_19" BEL
+        "cpm_cpu_cmp_ext_exr_20" BEL "cpm_cpu_cmp_ext_exr_21" BEL
+        "cpm_cpu_cmp_ext_exr_22" BEL "cpm_cpu_cmp_ext_exr_23" BEL
+        "cpm_cpu_cmp_ext_exr_24" BEL "cpm_cpu_cmp_ext_exr_25" BEL
+        "cpm_cpu_cmp_ext_exr_26" BEL "cpm_cpu_cmp_ext_exr_27" BEL
+        "cpm_cpu_cmp_ext_exr_28" BEL "cpm_cpu_cmp_ext_exr_29" BEL
+        "cpm_cpu_cmp_ext_exr_30" BEL "cpm_cpu_cmp_ext_exr_31" BEL
+        "cpm_cpu_cmp_ext_mem_in.iastore" BEL "cpm_cpu_cmp_ext_mem_in.putfield"
+        BEL "cpm_cpu_cmp_ext_mem_in.copy" BEL "cpm_cpu_cmp_ext_wraddr_wr" BEL
+        "cpm_cpu_cmp_ext_wr_dly" BEL "cpm_cpu_cmp_ext_cmp_mul_b_31" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_30" BEL "cpm_cpu_cmp_ext_cmp_mul_b_29" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_28" BEL "cpm_cpu_cmp_ext_cmp_mul_b_27" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_26" BEL "cpm_cpu_cmp_ext_cmp_mul_b_25" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_24" BEL "cpm_cpu_cmp_ext_cmp_mul_b_23" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_22" BEL "cpm_cpu_cmp_ext_cmp_mul_b_21" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_20" BEL "cpm_cpu_cmp_ext_cmp_mul_b_19" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_18" BEL "cpm_cpu_cmp_ext_cmp_mul_b_17" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_16" BEL "cpm_cpu_cmp_ext_cmp_mul_b_15" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_14" BEL "cpm_cpu_cmp_ext_cmp_mul_b_13" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_12" BEL "cpm_cpu_cmp_ext_cmp_mul_b_11" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_10" BEL "cpm_cpu_cmp_ext_cmp_mul_b_9" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_8" BEL "cpm_cpu_cmp_ext_cmp_mul_b_7" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_6" BEL "cpm_cpu_cmp_ext_cmp_mul_b_5" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_4" BEL "cpm_cpu_cmp_ext_cmp_mul_b_3" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_2" BEL "cpm_cpu_cmp_ext_cmp_mul_b_1" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_b_0" BEL "cpm_cpu_cmp_ext_cmp_mul_a_31" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_30" BEL "cpm_cpu_cmp_ext_cmp_mul_a_29" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_28" BEL "cpm_cpu_cmp_ext_cmp_mul_a_27" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_26" BEL "cpm_cpu_cmp_ext_cmp_mul_a_25" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_24" BEL "cpm_cpu_cmp_ext_cmp_mul_a_23" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_22" BEL "cpm_cpu_cmp_ext_cmp_mul_a_21" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_20" BEL "cpm_cpu_cmp_ext_cmp_mul_a_19" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_18" BEL "cpm_cpu_cmp_ext_cmp_mul_a_17" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_16" BEL "cpm_cpu_cmp_ext_cmp_mul_a_15" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_14" BEL "cpm_cpu_cmp_ext_cmp_mul_a_13" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_12" BEL "cpm_cpu_cmp_ext_cmp_mul_a_11" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_10" BEL "cpm_cpu_cmp_ext_cmp_mul_a_9" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_8" BEL "cpm_cpu_cmp_ext_cmp_mul_a_7" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_6" BEL "cpm_cpu_cmp_ext_cmp_mul_a_5" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_4" BEL "cpm_cpu_cmp_ext_cmp_mul_a_3" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_2" BEL "cpm_cpu_cmp_ext_cmp_mul_a_1" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_a_0" BEL "cpm_cpu_cmp_ext_cmp_mul_p_31" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_30" BEL "cpm_cpu_cmp_ext_cmp_mul_p_29" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_28" BEL "cpm_cpu_cmp_ext_cmp_mul_p_27" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_26" BEL "cpm_cpu_cmp_ext_cmp_mul_p_25" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_24" BEL "cpm_cpu_cmp_ext_cmp_mul_p_23" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_22" BEL "cpm_cpu_cmp_ext_cmp_mul_p_21" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_20" BEL "cpm_cpu_cmp_ext_cmp_mul_p_19" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_18" BEL "cpm_cpu_cmp_ext_cmp_mul_p_17" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_16" BEL "cpm_cpu_cmp_ext_cmp_mul_p_15" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_14" BEL "cpm_cpu_cmp_ext_cmp_mul_p_13" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_12" BEL "cpm_cpu_cmp_ext_cmp_mul_p_11" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_10" BEL "cpm_cpu_cmp_ext_cmp_mul_p_9" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_8" BEL "cpm_cpu_cmp_ext_cmp_mul_p_7" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_6" BEL "cpm_cpu_cmp_ext_cmp_mul_p_5" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_4" BEL "cpm_cpu_cmp_ext_cmp_mul_p_3" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_2" BEL "cpm_cpu_cmp_ext_cmp_mul_p_1" BEL
+        "cpm_cpu_cmp_ext_cmp_mul_p_0" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_lmux_0" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_lmux_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_lmux_2" BEL
+        "cpm_cpu_cmp_core_cmp_dec_br" BEL "cpm_cpu_cmp_core_cmp_dec_sel_log_0"
+        BEL "cpm_cpu_cmp_core_cmp_dec_sel_log_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_sub" BEL
+        "cpm_cpu_cmp_core_cmp_dec_ena_jpc" BEL
+        "cpm_cpu_cmp_core_cmp_dec_ena_vp" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_bmux" BEL
+        "cpm_cpu_cmp_core_cmp_dec_ena_a" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_mmux" BEL
+        "cpm_cpu_cmp_core_cmp_dec_ena_ar" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_0" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_ena_b" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_amux" BEL "cpm_cpu_dly_mux_mem_1" BEL
+        "cpm_cpu_dly_mux_mem_0" BEL "cpm_cpu_next_mux_mem_1" BEL
+        "cpm_cpu_next_mux_mem_0" BEL "cpm_cpu_is_pipelined" BEL
+        "cpm_cpu_cmp_core_cmp_bcf_tp_0" BEL "cmp_io_cmp_ua_clk16_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_encod_rdy_cache" BEL
+        "cpm_cpu_next_mux_mem_1_1" BEL "cpm_cpu_cmp_core_cmp_stk_a_1_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_0_1" BEL "cpm_cpu_cmp_mem_state_FFd3_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_4_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_1_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_0_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_2_1" BEL "cpm_cpu_cmp_core_cmp_stk_a_3_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_5_1" BEL
+        "cpm_cpu_cmp_mem_state_FFd3_2" BEL "cpm_cpu_cmp_core_cmp_stk_a_0_2"
+        BEL "cpm_cpu_cmp_ext_mem_in.getfield_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_6_1" BEL "cpm_cpu_cmp_core_cmp_stk_a_7_1"
+        BEL "cmp_io_sel_reg_1_1" BEL "cpm_cpu_cmp_ext_mem_in.iaload_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_8_1" BEL "cpm_cpu_cmp_core_cmp_stk_a_9_1"
+        BEL "cpm_cpu_cmp_mem_state_FFd29_1" BEL "cpm_cpu_is_pipelined_1" BEL
+        "cpm_cpu_dly_mux_mem_1_1" BEL "cmp_io_sel_reg_0_1" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_sub_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_3_1" BEL
+        "cpm_cpu_cmp_mem_cmp_cache_nxt_2_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_1_2" BEL "cpm_cpu_cmp_mem_state_FFd29_2"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_2_2" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_4_2" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_1_2" BEL
+        "cpm_cpu_cmp_mem_addr_reg_2_1" BEL "cpm_cpu_cmp_mem_addr_reg_1_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_3_2" BEL
+        "cpm_cpu_cmp_core_cmp_dec_sel_rmux_0_2" BEL
+        "cpm_cpu_cmp_ext_mem_scio_rd_1" BEL "cpm_cpu_cmp_core_cmp_stk_b_31_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_5_2" BEL
+        "cpm_cpu_cmp_ext_mem_in.getfield_2" BEL "cmp_io_sel_reg_1_2" BEL
+        "cpm_cpu_cmp_ext_mem_in.iaload_2" BEL "cpm_cpu_cmp_mem_addr_reg_0_1"
+        BEL "cpm_cpu_cmp_core_cmp_stk_a_10_1" BEL
+        "cpm_cpu_cmp_core_cmp_stk_a_11_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_0_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_1_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_10_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_11_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_12_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_13_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_14_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_15_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_2_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_3_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_4_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_5_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_6_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_7_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_8_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_data_9_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_5" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_6" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_7" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_2_8" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_3_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_3_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_3_3" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_3_4" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_4_1" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_4_2" BEL
+        "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_rd_addr_5_1" BEL
+        "int_res_1" BEL "int_res_2" BEL "Mshreg_cmp_io_cmp_ua_rxd_reg_2" BEL
+        "cmp_io_cmp_ua_rxd_reg_2" PIN
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.A_pins<15>"
+        PIN
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0.B_pins<15>"
+        PIN
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.A_pins<15>"
+        PIN
+        "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1.B_pins<15>";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/ham_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_top/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/ham_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_decod</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_decod/behavior</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_enc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/ham_enc/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/bhc</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/bhc/sim</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/bhc32</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="unknown" >Unit <arg fmt="%s" index="1">work/bhc32/sim</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd</arg>&quot;.
+</msg>
+
+</messages>
+

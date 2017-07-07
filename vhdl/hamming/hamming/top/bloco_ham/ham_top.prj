@@ -1,0 +1,5 @@
+vhdl work "cache32.vhd"
+vhdl work "../../memoriaRB_S4_s18/memo_s4_s18.vhd"
+vhdl work "../../encoder/ham_enc.vhd"
+vhdl work "../../decoder/ham_decod.vhd"
+vhdl work "../ham_top.vhd"

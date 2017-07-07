@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1234533116 source:c:\david\jop3\jop\softc\calljop\main.c
+	<stdio.h>
+	<stdlib.h>
+

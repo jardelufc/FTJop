@@ -1,0 +1,10 @@
+EN bhc32 NULL C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd sub00/vhpl02 1230816424
+EN ham_enc NULL C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd sub00/vhpl04 1230816420
+EN ham_top NULL C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd sub00/vhpl08 1230816428
+EN ham_decod NULL C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl06 1230816422
+AR ham_enc behavioral C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd sub00/vhpl05 1230816421
+AR ham_top behavioral C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd sub00/vhpl09 1230816429
+AR bhc sim C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd sub00/vhpl01 1230816427
+AR bhc32 sim C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd sub00/vhpl03 1230816425
+EN bhc NULL C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd sub00/vhpl00 1230816426
+AR ham_decod behavior C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl07 1230816423

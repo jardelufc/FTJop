@@ -1,0 +1,8 @@
+vhdl work "C:\David\jop3_v21\jop\vhdl\scio\fifo.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\top\jop_config_xs3.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\scio\sc_sys.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\core\jop_types.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\simpcon\sc_pack.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\scio\sc_uart.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\scio\sc_ioparallel.vhd"
+vhdl work "C:\David\jop3_v21\jop\vhdl\scio\scio_min.vhd"

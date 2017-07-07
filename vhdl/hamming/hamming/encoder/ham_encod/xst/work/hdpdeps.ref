@@ -1,0 +1,8 @@
+V3 4
+FL C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd 2008/11/15.11:46:22 J.36
+EN work/ham_enc 1226756797 FL C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/ham_enc/Behavioral 1226756798 \
+      FL C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd EN work/ham_enc 1226756797
+FL C:/LESC/Hamming/hamming(15-09)/encoder/ham_encod/../ham_enc.vhd 2008/11/15.11:46:22 J.36

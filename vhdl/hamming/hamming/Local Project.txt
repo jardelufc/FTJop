@@ -1,0 +1,20 @@
+o projeto do ise tá em /top/bloco_ham/bloco_ham.ise
+arquivos:
+
+top:
+/top/ham_top.vhdl
+
+blocotb:
+/top/bloco_ham/blocotb.vhdl
+
+cache_s9_s36:
+/top/bloco_ham/cache32.vhdl
+
+cache_s4_s18:
+/memoriaRB_S4_s18/mome_s4_s18.vhdl
+
+encoder:
+/encoder/ham_enc.vhdl
+
+decoder:
+/decoder/ham_dec.vhdl

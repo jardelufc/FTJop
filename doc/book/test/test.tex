@@ -1,0 +1,499 @@
+
+Several different test cases are used for a regression test of the
+processor, system code, the JVM, and the JDK implementation. Most
+test cases can be found in \dirent{target/src/test/jvm} and
+\dirent{target/src/test/jdk}. Package \code{testrt} contains exmples
+to test the real-time scheduler of JOP. The description covers only
+newer test cases. Additional test cases can be found in the
+according packages.
+
+\section{Garbage Collection}
+
+GC test cases can be found in package \code{gctest} and
+\code{gcinc}.
+
+\subsubsection{SimpGC1}
+
+\begin{description}
+    \item[Purpose:]
+Check if the GC triggers the allocation of memory.
+Check if the GC uses all the available heap memory.
+    \item[Expected Results:]
+The tester should see a message reporting that
+the garbage collector was triggered. The tester should see a message reporting
+the memory size that should match the heap memory size reported at initialization of the
+GC.
+    \item[Description:]
+The application consists of just one thread which continuously
+allocates memory for new objects in the heap. The objects contain
+only two integer fields and a constructor that initializes them. The
+references to objects are not stored in any variable. The objective
+is to have an idea of how many objects of a certain class are
+necessary to fill the heap. This measure should be useful for
+inducing GC allocation in the next test cases.
+    \item[Results Observed:]
+9728 objects were created before GC was triggered. GC seems to free
+the same amount of memory every time it runs (it always triggers
+after the allocation of 9728 objects).
+\end{description}
+
+\subsubsection{SimpGC2}
+
+\begin{description}
+    \item[Purpose:]
+Check if the GC triggers the allocation of memory. Check if
+unreferenced local (method scope) objects are garbage collected.
+    \item[Expected Results:]
+The tester should a set of messages reporting that the garbage
+collector was triggered.
+    \item[Description:]
+Similar to the previous test case. The difference here is that the
+allocation of memory is performed through several method calls.
+After each method call the objects created are unreferenced. After
+GC is activated it should be possible to create the same number of
+objects as before allocating any object.
+    \item[Results Observed:]
+29190 objects were created, 9730 objects before GC triggers, each
+time.
+
+\emph{Run out of handles in new Object!}
+
+\emph{GC allocation triggered}
+
+Thus, all the unreferenced objects local to the method were garbage
+collected each time GC run.
+
+\end{description}
+
+\subsubsection{SimpGC3}
+
+\begin{description}
+    \item[Purpose:]
+Test concurrent request of memory from different threads (now using
+inheritance instead of interfaces).
+    \item[Expected Results:]
+The tester should see no exceptions and but several GC messages as
+explained below.
+    \item[Description:]
+We have two threads each creating a linked list. Both threads
+add(concurrently) a certain amount of elements to the linked list.
+Each element in the linked list has a field with a number. Each
+thread keeps an increasing order (with no duplication) of those
+fields.  GC is triggered. The Linked lists are checked to see if
+they remain correct. We alternate among creation and verification of
+the elements in the list, so eventually we run out of memory and GC
+is triggered.
+    \item[Results Observed:]
+No exceptions were thrown during execution, thus object integrity is
+fine.
+\end{description}
+
+\subsubsection{SimpGC4}
+
+\begin{description}
+    \item[Purpose:]
+Check the behaviour of the GC when several references to an object
+are present.
+    \item[Expected Results:]
+The tester should see no exceptions.
+    \item[Description:]
+An object is created and then a reference to the object is "taken"
+by one thread each time. A reference to the object is always present
+but stored in different places each time. At first the reference is
+stored in a static field, then it is stored in a thread's class
+variable. The static variable is set to null when a thread acquires
+the object reference. In the same way when a thread releases the
+object it sets its reference to null. Every time that the reference
+is changed, GC is triggered and the object integrity is verified.
+    \item[Results Observed:]
+GC seems to work fine with this test case. Anyway I think that a
+finer granularity in the interaction of threads could make a better
+scenario for obtaining a better test (I believe that granularity
+here is fixed by the length of the run() method of each runnable
+thread).
+\end{description}
+
+\subsubsection{SimpGC5}
+
+\begin{description}
+    \item[Purpose:]
+Check if the GC correctly detects garbage objects.
+    \item[Expected Results:]
+The tester should see a message verifying that non-garbage objects
+are alive.
+    \item[Description:]
+A data structure similar to a tree is created then references to
+certain levels of the tree are stored in class variables. GC is
+triggered. The code checks that the objects below the level of the
+node for which a reference is held are still alive(and correct).
+    \item[Results Observed:]
+No issues arose when the test case was run.
+
+Note: It's easy to run out of memory when initializing the tree
+(i.e. making the tree "grow" ). I used a binary tree with a depth of
+8.
+
+\end{description}
+
+\subsubsection{SimpGC6}
+
+\begin{description}
+    \item[Purpose:]
+Check if the GC detects cycles.
+    \item[Expected Results:]
+The tester should verify that the same amount of memory is available
+before and after the creation of a set of chained objects.
+    \item[Description:]
+A cycle is formed by a closed chain of objects, one holding a
+reference to the next. To verify that the unreferenced chained
+objects are garbage collected, we measure the maximum allocable
+object size before and after the allocation of the chained objects.
+They should match.
+    \item[Results Observed:]
+The amount of objects created before GC allocation is triggered was
+measured before and after the creation of a set of chained objects.
+Through a log file it was verified that the number was the same. For
+the Cyclone board and JOP version 01/08/07, the number was 9723.
+Note: To obtain a logfile, make japp > myLogfile.
+\end{description}
+
+\section{JVM Functions}
+
+The following sections list results from additional test cases:
+
+\subsubsection{Ifacmp}
+\begin{description}
+   \item[Purpose:]
+Test if\_acmp
+   \item[Description:]
+The test case works by testing both an equal and a non
+equal(ifacmpeq = 165 and 0xa5 ifacmpne) with true and false
+conditions(like a branch and condition coverage test). This leads to
+4 if branches.
+
+Following, we have an extract of the .class :
+
+36:aload\_2 \newline 37:aload\_3 \newline 38:if\_acmpne       43 $
+\longleftarrow $ \newline 41:iconst\_0\newline 42:istore\_1\newline
+43:aload\_3 \newline 44:astore\_2\newline 45:aload\_2\newline
+46:aload\_3        \newline 47:if\_acmpeq       52 $ \longleftarrow
+$ \newline 50:iconst\_0        \newline 51:istore\_1        \newline
+52:iload\_1         \newline 53:ireturn         \newline
+
+We see there that both eq and ne conditions are produced.
+   \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+
+\subsubsection{BranchTest1}
+\begin{description}
+   \item[Purpose:]
+Test Branchs on reference comparison.
+   \item[Description:]
+The test case works by testing the following bytecodes:
+\newline If\_acmp\textless cond\textgreater, Ifnonnull, Ifnull. All
+conditions are provided(both true and false) to every variant of the
+bytecodes (i.e., eq or neq). In this way, every possibile execution
+is covered.
+  \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+\subsubsection{BranchTest2}
+\begin{description}
+   \item[Purpose:]
+Test Branch on int comparison.
+   \item[Description:]
+The test case works by testing the following bytecode: \newline
+If\_icmp\textless cond\textgreater. All conditions are provided(both
+true and false) to every variant of the bytecode (i.e., eq, neq, gt,
+lt, etc). In this way, every possibile execution is covered.
+  \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+
+\subsubsection{BranchTest3}
+\begin{description}
+   \item[Purpose:]
+Test Branch on int comparison with zero(if\textless
+cond\textgreater).
+   \item[Description:]
+The test case works by testing the following bytecode: \newline
+If\textless cond\textgreater. All conditions are provided(both true
+and false) to every variant of the bytecode (i.e., eq, neq, gt, lt,
+etc). In this way, every possibile execution is covered.
+  \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+
+
+
+\subsubsection{ArrayTest2}
+\begin{description}
+   \item[Purpose:]
+Test arrays of references. Test array initialization, length,
+storing and loading reference values to and from arrays of
+references. Test array related features of the following bytecodes:
+arraylength, aastore.
+   \item[Description:]
+A set of arrays of related types is created, then operations are
+performed on them. By storing elements in the arrays, all cases of
+aastore are produced. As a means of verification, the elements
+stored in the array are checked in the code.
+
+   \item[Results Observed:]
+The test run Ok. Issue related to CheckCast.
+\end{description}
+
+\subsubsection{ArrayTest3}
+\begin{description}
+   \item[Purpose:]
+Test arrays of primitives. Test array initialization, length,
+storing and loading reference values to and from arrays of
+references. Test array related features of the following bytecodes:
+baload, caload, iaload, laload, saload,
+bastore,castore,iastore,lastore.
+   \item[Description:]
+A set of arrays of primitive types is created, then load and store
+operations are performed on them. By storing and loading elements
+into and from the arrays, all supported Xastore and Xaload
+instruction are exercised. As a means of verification, the elements
+stored in the array are checked in the code.
+  \item[Note:]
+The throw of NullPointerException still needs to be tested.
+   \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+\subsubsection{Conversion}
+\begin{description}
+   \item[Purpose:]
+Test primitive type conversion. Bytecodes exercised: i2b, i2c, i2l,
+i2s, l2i.
+   \item[Description:]
+This testcase extends the existent Conversion testcase to include
+conversion between all the supported primitive types.
+   \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+
+\subsubsection{Logic1}
+\begin{description}
+   \item[Purpose:]
+Test shift operators. Bytecodes exercised: ishl, ishr, iushr.
+   \item[Description:]
+   \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+
+\subsubsection{Logic2}
+\begin{description}
+   \item[Purpose:]
+Test arithmetic and logic operations. Bytecodes exercised: ineg,
+ior, irem, isub, ixor, iand.
+   \item[Description:]
+Basic bit levels operations are performed.
+   \item[Results Observed:]
+The test run Ok. The throw of the proper exceptions was manually
+verified.
+\end{description}
+
+
+\subsubsection{Logic3}
+\begin{description}
+   \item[Purpose:]
+Test arithmetic and logic operations.
+   \item[Description:]
+Jump based on int comparison is tested.
+   \item[Results Observed:]
+Issue arrised: Some comparisons failed due to a failure handling the
+overflow.
+\end{description}
+
+
+\subsubsection{Switch2}
+\begin{description}
+   \item[Purpose:]
+Test switch statement. Bytecodes exercised: tableswitch,
+lookupswitch.
+   \item[Description:]
+Two switch expression are used to test switch related bytecodes.
+   \item[Results Observed:]
+The test run Ok.
+\end{description}
+
+\section{JDK Test Cases}
+
+\begin{description}
+    \item[Note on name convention]
+
+: to avoid collision among the name of the test case and the name of
+the class being tested, we just use the first capital letter of the
+first word of the class under test. So the test case for
+ByteArrayInputStream is named BArrayInputStream.
+    \item[Package: java.io]
+
+    \item[Missing Classes]
+The following is a list of missing classes as for the Jdk 1.1.8
+version.
+Package java.io\\
+BufferedInputStream, BufferedOutputStream, BufferedReader, BufferedWriter.\\
+\large \bf \begin{center} Package java.io \end{center}
+
+\end{description}
+
+\subsubsection{BArrayInputStream}
+\begin{description}
+   \item[Purpose:]
+Test the ByteArrayInputStream class of JDK.
+    \item[Description:]
+Two objects of the ByteArrayInputStream class are created and
+initialized. All the method are excercised under multiple conditions
+and verified.
+    \item[Results Observed:]
+    The test run ok.
+    \item[Coverage:]
+    method: 78\%(7/9), block: 86\%(122/142), line: 80\%(23,9/30).
+    \item[Note:]
+The behaviour of the mark(int) method is different from that in the
+JDK 1.1.8 specification. The API specification states that the
+method should update the current mark in the stream to the provided
+parameter, but the result observed is that the mark is set to the
+current position.
+
+\end{description}
+
+\subsubsection{BArrayOutputStream}
+\begin{description}
+   \item[Purpose:]
+Test the ByteArrayInputStream class of JDK.
+    \item[Description:]
+Two objects of the ByteArrayInputStream class are created and
+initialized. All the method are excercised under multiple conditions
+and verified to produce the proper output.
+    \item[Results Observed:]
+    The test run ok. \\ The following methods were not found:\\
+    \textbullet toString(String)\\
+    \textbullet writeTo(OutputStream)
+    It was necessary to remove the try-catch for UnsupportedEncodingException in the
+    String toString() method in ByteArrayInputStream in order for the testcase to compile.
+    \item[Coverage:]
+    method: 100\%(9/9), block: 75\%(93/124), line: 81\%(25/31).
+    \item[Note:]
+Accordding to JDK 1.1.8 specification, the toString(int) method is
+deprecated. This method was
+not tested.\\
+Accordding to JDK 1.1.8 specification, the constructor String(byte
+bytes[],int offset,int length) in class String should not throw the
+UnsupportedEncodingException exception.
+
+
+\end{description}
+
+
+
+\subsubsection{DInputStream}
+\begin{description}
+   \item[Purpose:]
+Test the DataInputStream class of JDK.
+    \item[Description:]
+An object of the myInputStream class is created. The myInputStream
+class extends the InputStream class and is used to simulate an
+InputStream. Methods in the myInputStream
+class are included to produce necessary testing conditions as follows:\\
+\textbullet setError() : simulates an I/O error
+and causes an exception to be thrown when trying to read from the Stream.\\
+\textbullet SetCorrect() : disables the effect of the previous method.\\
+\textbullet setEndReached(): simulates an end of
+stream. The call to this methods results in a -1 returned from the read() method.\\
+\textbullet SetEndNotReached() : disables the effect of the previous method.\\
+
+All the method are excercised under multiple conditions and verified
+to produce the proper output.
+    \item[Results Observed:]
+    The test run ok.
+    \item[Coverage:]
+    method: 96\%(25/26), block: 69\%(345/498), line: 72\%(65/90).
+    \item[Note:]
+    Comment and uncomment the methods above to manually test the Exception behaviour.
+\end{description}
+
+\subsubsection{DOutputStream}
+\begin{description}
+   \item[Purpose:]
+Test the DataOutputStream class of JDK.
+    \item[Description:]
+An object of the myOutputStream class is created. The myOutputStream
+class extends the OutputStream class and is used to simulate an
+OutputStream. Methods in the myOutputStream
+class are included to produce necessary testing conditions as follows:\\
+\textbullet setError() : simulates an I/O error
+and causes an exception to be thrown when trying to write to the Stream.\\
+\textbullet SetCorrect() : disables the effect of the previous method.\\
+The following methods are used to verify contents written to the OutputStream:\\
+\textbullet checkData(byte data,int position): returns a boolean value of true\\
+if the provided data is found at that position in the stream.\\
+\textbullet checkData(byte data[],int offset, int len): returns true if the data\\
+of the provided array is found in the OutputStream starting at the
+provided offset. All the method are excercised under several
+conditions and verified to produce the proper output.
+    \item[Results Observed:]
+    The test run ok. \\ The following methods were not found:\\
+    \textbullet int size()\\
+    \item[Coverage:]
+    method: 93\%(13/14), block: 70\%(284/406), line: 78\%(62/80).
+    \item[Note:]
+Comment and uncomment the methods above to manually test the
+Exception behaviour.
+
+\large \bf \begin{center} Package java.lang \end{center}
+\end{description}
+
+\subsubsection{PrimitiveClasses}
+\begin{description}
+   \item[Purpose:]
+Test the primitive types wrapper classes of JDK.
+    \item[Description:]
+We create objects of the primitive wrapper classes and perform operations on them.\\
+Class methods are excercised under several conditions and verified
+to produce the proper output.
+    \item[Results Observed:]
+    Possible issue in constructor Boolean(String): according to JVM specification
+    1.1.8 when the argument to the method is something different from the string "true"
+    a Boolean representing false is allocated.\\
+    The problem arises when the argument is the null pointer. An exception is thrown in
+    JOP in that case. According to the specification, this constructor should not throw
+    any exception, it just must create a Boolean representing false.\\
+    When running on Sun's JVM the constructor creates the false Boolean as expected.\\
+    The constructor also fails to create a proper true object when given a string as an argument.
+    It should ignore case, but "tRue" gives a different result from "true", when they should both
+    produce a Boolean true object.\\
+    Also the static method valueOf should receive a string instead of a boolean as its argument.\\
+    The constructor Byte(String) was not found.
+    \item[Coverage:]
+    Found in table 1.
+    \item[Note:]
+The method Boolean.valueOf(boolean) was not tested.
+\end{description}
+
+\begin{table}
+\begin{center}
+\caption{\label{MyTable} Testing Coverage Results}
+\begin{tabular}[t]{|l|l|l|l|l|}
+\hline
+Package & Class & Method & Block & Line \\
+\hline
+java.lang &  &  &  &  \\
+\hline
+  & Boolean & 88\% (7/8) & 91\% (64/70)  & 93\% (13/14) \\
+\hline
+  & Byte & 88\% (7/8) & 91\% (64/70)  & 93\% (13/14) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

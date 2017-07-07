@@ -1,0 +1,10 @@
+V3 4
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" 2008/09/25.14:36:58 J.30
+EN work/ham_decod 1222364670 \
+      FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" \
+      PB ieee/STD_LOGIC_UNSIGNED 1163575073 PB ieee/std_logic_1164 1163575071 \
+      PB ieee/std_logic_arith 1163575072
+AR work/ham_decod/behavior 1222364671 \
+      FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" \
+      EN work/ham_decod 1222364670
+FL "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod/../ham_decod.vhd" 2008/09/25.14:36:58 J.30

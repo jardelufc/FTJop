@@ -1,0 +1,108 @@
+Release 9.1i Map J.30
+Xilinx Mapping Report File for Design 'jop'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx91i\bin\nt\map.exe -ise
+C:/David/jop3_ham_crc/jop/xilinx/s3sk/jop.ise -intstyle ise -p xc3s200-ft256-5
+-cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.36 $
+Mapped Date    : Mon Apr 27 11:35:34 2009
+
+Design Summary
+--------------
+Number of errors   :   6
+Number of warnings :   1
+
+Section 1 - Errors
+------------------
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy<7>11" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy<7>) has input
+   signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed.
+   See the trim report for details about why the input signal will become
+   undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol
+   "cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6) has input signal
+   "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>" which will be trimmed. See the
+   trim report for details about why the input signal will become undriven.
+ERROR:MapLib:661 - LUT4 symbol "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<7>71"
+   (output signal=cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<7>_map23) has input
+   signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" which will be trimmed.
+   See the trim report for details about why the input signal will become
+   undriven.
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:864 - The following Virtex Blockram(s) is/are being retargeted to
+   Virtex2 Blockram(s). This will waste 75% of Virtex2 Blockram capacity. To
+   obtain better utilization, Please re-run memory generator to retarget to
+   Virtex2 Blockram modules:
+   RAMB4_S16_S16 symbol
+   "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0" (output
+   signal=cpm_cpu_cmp_core_cmp_stk_ram_dout<15>),
+   RAMB4_S16_S16 symbol
+   "cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1" (output
+   signal=cpm_cpu_cmp_core_cmp_stk_ram_dout<31>)
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:863 - The following Virtex BUFG(s) is/are being retargeted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFGP symbol "clk_BUFGP" (output signal=clk_BUFGP),
+   BUFG symbol "cpm_cpu_cmp_mem_cmp_crc_Comp_0_0_not0000_BUFG" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_Comp_0_0_not0000),
+   BUFG symbol "cpm_cpu_cmp_mem_cmp_crc_D2_3_and0000_BUFG" (output
+   signal=cpm_cpu_cmp_mem_cmp_crc_D2_3_and0000),
+   BUFG symbol "cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_en_BUFG" (output
+   signal=cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_en)
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  10 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>" is unused and has been
+removed.
+The signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>" is unused and has been
+removed.
+The signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<9>_map19" is unused and
+has been removed.
+The signal "cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000<6>_map19" is unused and
+has been removed.
+The signal "N11920" is unused and has been removed.
+The signal "N11921" is unused and has been removed.
+The signal "N11922" is unused and has been removed.
+The signal "N11923" is unused and has been removed.
+The signal "N11924" is unused and has been removed.
+The signal "N11925" is unused and has been removed.
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="863" delta="unknown" >The following Virtex BUFG(s) is/are being retargeted to Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+<arg fmt="%s" index="1">BUFGP symbol &quot;clk_BUFGP&quot; (output signal=clk_BUFGP),
+BUFG symbol &quot;cpm_cpu_cmp_mem_cmp_crc_Comp_0_0_not0000_BUFG&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_Comp_0_0_not0000),
+BUFG symbol &quot;cpm_cpu_cmp_mem_cmp_crc_D2_3_and0000_BUFG&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_D2_3_and0000),
+BUFG symbol &quot;cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_en_BUFG&quot; (output signal=cpm_cpu_cmp_mem_cmp_ham_top_cache4bits_reg_wr_en)</arg>
+</msg>
+
+<msg type="warning" file="MapLib" num="864" delta="unknown" >The following Virtex Blockram(s) is/are being retargeted to Virtex2 Blockram(s). This will waste 75% of Virtex2 Blockram capacity. To obtain better utilization, Please re-run memory generator to retarget to Virtex2 Blockram modules:
+<arg fmt="%s" index="1">RAMB4_S16_S16 symbol &quot;cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_0&quot; (output signal=cpm_cpu_cmp_core_cmp_stk_ram_dout&lt;15&gt;),
+RAMB4_S16_S16 symbol &quot;cpm_cpu_cmp_core_cmp_stk_cmp_ram_cmp_xram_block_cmp_ram_1&quot; (output signal=cpm_cpu_cmp_core_cmp_stk_ram_dout&lt;31&gt;)</arg>
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy&lt;7&gt;11&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_Msub_state_len_addsub0001_cy&lt;7&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;6&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;9&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt0000211&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_gt00002_map7)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;6&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;6&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt0000112&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_state_flag_cmp_lt00001_map6)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;9&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="661" delta="unknown" ><arg fmt="%s" index="1">LUT4 symbol &quot;cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;7&gt;71&quot; (output signal=cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;7&gt;_map23)</arg> has input signal &quot;<arg fmt="%s" index="2">cpm_cpu_cmp_mem_cmp_crc_state_len_mux0000&lt;6&gt;</arg>&quot; which will be trimmed. See the trim report for details about why the input signal will become undriven.
+</msg>
+
+</messages>
+

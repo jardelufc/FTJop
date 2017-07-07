@@ -1,0 +1,8 @@
+vhdl work "../../vhdl/scio/fifo.vhd"
+vhdl work "../../vhdl/top/jop_config_xs3.vhd"
+vhdl work "../../vhdl/scio/sc_sys.vhd"
+vhdl work "../../vhdl/core/jop_types.vhd"
+vhdl work "../../vhdl/simpcon/sc_pack.vhd"
+vhdl work "../../vhdl/scio/sc_uart.vhd"
+vhdl work "../../vhdl/scio/sc_ioparallel.vhd"
+vhdl work "../../vhdl/scio/scio_min.vhd"

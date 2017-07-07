@@ -1,0 +1,5 @@
+vhdl work "C:\David\LESC\Hamming\hamming(15-09)\top\bloco_ham\cache32.vhd"
+vhdl work "C:\David\LESC\Hamming\hamming(15-09)\memoriaRB_S4_s18\memo_s4_s18.vhd"
+vhdl work "C:\David\LESC\Hamming\hamming(15-09)\encoder\ham_enc.vhd"
+vhdl work "C:\David\LESC\Hamming\hamming(15-09)\decoder\ham_decod.vhd"
+vhdl work "C:\David\LESC\Hamming\hamming(15-09)\top\ham_top.vhd"

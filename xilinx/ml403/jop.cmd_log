@@ -1,0 +1,10 @@
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+ngdbuild -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -dd _ngo -nt timestamp -uc "jop.ucf" -p xc4vfx12-ff668-10 "jop.ngc" jop.ngd
+map -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -p xc4vfx12-ff668-10 -cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+ngdbuild -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -dd _ngo -nt timestamp -uc "jop.ucf" -p xc4vfx12-ff668-10 "jop.ngc" jop.ngd
+map -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -p xc4vfx12-ff668-10 -cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+ngdbuild -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -dd _ngo -nt timestamp -uc "jop.ucf" -p xc4vfx12-ff668-10 "jop.ngc" jop.ngd
+map -ise "C:/David/jop3_ham_crc/jop/xilinx/ml403/jop.ise" -intstyle ise -p xc4vfx12-ff668-10 -cm area -pr b -k 4 -c 100 -o jop_map.ncd jop.ngd jop.pcf

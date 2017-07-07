@@ -1,0 +1,194 @@
+
+\input{preamble}
+
+
+% makes problems with extra title info!!!!
+%\input{classes/jdoc_preamble}
+
+
+\begin{document}
+
+
+
+\frontmatter \pagestyle{empty}
+
+\input{intro/frontmatter}
+
+\pagestyle{scrheadings}
+
+\tableofcontents \cleardoublepage
+
+%\pagestyle{scrheadings} \pagenumbering{arabic} \setcounter{page}{1}
+\mainmatter
+
+%-----------------------------------------------------------------
+% here we start to work
+%-----------------------------------------------------------------
+
+\chapter{Introduction}
+\label{chap:intro}
+    \input{intro/intro}
+
+
+
+
+
+
+\chapter{The Design Flow}
+\label{chap:build}
+\input{build/flow}
+\input{intro/directory}
+\input{intro/exercise}
+
+\chapter{Java and the Java Virtual Machine}
+\label{chap:java}
+\input{intro/java}
+
+%% This chapter is removed as it is found in the thesis.
+%% We can probably recycle some text for the embedded seciton in
+%% former chapter.
+%%
+%\chapter{Java for Embedded Real-Time Systems}
+%%\emph{Shall we keep this one? Or better SCJ/RtThread description
+%%(with some of general Java ME related stuff -- shorter.}
+%
+%\label{chap:rtjava}
+%    \input{restrictions/restrictions}
+
+\chapter{JOP Hardware Architecture}
+\label{chap:arch}
+
+    \input{arch/arch_jop}
+
+\clearpage
+    \section{An Efficient Stack Machine}
+    \label{sec:stack}
+    \input{stack/stack}
+
+\clearpage
+    \input{arch/hwsw_codesign}
+\clearpage
+    \input{arch/rt_predict}
+
+\clearpage
+    \section{A Time-Predictable Instruction Cache}
+    \label{sec:cache}
+    \input{cache/cache}
+
+\chapter{JOP Runtime System}
+\label{chap:runtime}
+
+    \input{runtime/rt_intro}
+    \input{runtime/rt_profile}
+    \input{runtime/rt_user}
+% rewrite scjava
+    \input{runtime/scjava}
+\clearpage
+    \input{jvm/jvm}
+    \input{jvm/boot}
+
+\chapter{Real-Time Garbage Collection}
+\label{chap:rtgc}
+    \input{jvm/gc}
+
+\chapter{Worst-Case Execution Time}
+\label{chap:wcet}
+    \input{wcet/wcet}
+
+\chapter{Low-level I/O}
+\label{chap:io}
+    \input{io/io}
+
+\chapter{The SimpCon Interconnect}
+\label{chap:simpcon}
+\newcommand{\scgrsc}{.65}
+\newcommand{\scgrp}{simpcon}
+\hyphenation{SimpCon}
+\input{simpcon/simpcon_intro}
+\input{simpcon/simpcon_text}
+
+\chapter{Chip Multiprocessing}
+\label{chap:cmp}
+\input{cmp/cmp}
+
+
+%\chapter{The Embedded Java TCP/IP Stack}
+%\label{chap:ejip}
+%\newcommand{\grpath}{ejip}
+%\input{ejip/ejip}
+
+%\chapter{Ongoing Work}
+%\label{chap:ongoing}
+%    \input{ongoing/interrupt}
+
+\chapter{Results}
+%\emph{Copy some stuff from the thesis (and JSA). Change this chapter
+%to new form... Update with actual numbers!}
+
+\label{chap:results}
+    \input{results/results}
+
+\chapter{Related Work}
+\label{chap:related}
+
+%\emph{Update with JSA writing and remove old, not used stuff (or
+%shorten it)}
+    \input{related/related}
+
+
+\chapter{Summary}
+\label{chap:conclusions}
+
+    \input{outro/outro}
+
+
+%\pagestyle{empty}
+%\chaptermark{} % remove chapter mark in the heading, but it does it on the
+               % last page too!
+
+
+
+%\def\rightmark{} % remove section part in the heading
+\appendix
+ \ihead{\leftmark} % use chapter (=\leftmark) on both pages in the appendix
+
+\chapter{Publications}
+    \input{outro/publications}
+
+%\chapter{Glossary}
+\chapter{Acronyms}
+ \label{appx:acro}
+\input{appendix/acronyms}
+
+
+\chapter{JOP Instruction Set} \label{appx:jop:instr}
+\input{appendix/instruction_set}
+
+\chapter{Bytecode Execution Time} \label{appx:bytecode}
+\input{appendix/bytetable}
+
+%\chapter{Benchmark Results} \label{appx:bench}
+%\input{appendix/benchmarks}
+
+%\chapter{Regression Tests} \label{appx:test}
+%\input{test/test}
+
+
+\chapter{Cyclone FPGA Board} \label{appx:cycore}
+\input{appendix/cycore}
+
+%\input{classes/classes}
+
+\bibliographystyle{plain}
+%\bibliographystyle{plnnolow} % changed plain.bst to keep upper case in titles
+\bibliography{../bib/all}
+
+% in the real book version we should add an index
+\printindex
+
+% comment for the book ;-)
+\chapter{TODO}
+\input{appendix/todo}
+
+
+\end{document}

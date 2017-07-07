@@ -1,0 +1,487 @@
+\section{Working Hours}
+
+Start 130h counting down from 14.9.2008
+
+Count: 120 18.9.
+
+\section{TODO Handbook}
+
+\begin{itemize}
+  \item Green book corrections of
+  \begin{itemize}
+    \item Chapter~\ref{chap:arch}
+    \item Chapter~\ref{chap:runtime}
+    \item Chapter~\ref{chap:rtgc}
+    \item Chapter~\ref{chap:wcet}
+    \item Chapter~\ref{chap:simpcon}
+    \item Chapter~\ref{chap:cmp}
+    \item Chapter~\ref{chap:results}
+    \item Chapter~\ref{chap:related}
+    \item Chapter~\ref{chap:conclusions}
+  \end{itemize}
+
+    \item Acknowledgements
+    \item Update Results section (and decide on a different name)
+    \item Rewrite user scheduler to a scheduler description
+    \item Derived work: Flavius BlueJEP, Christof, Dresden!
+    \item Figure from Slides on configuration (FPGA + serial/USB
+    channel)
+    \item Index
+    \item Trevor's changes in the Wiki design flow page
+    \item Cover and back cover including text on Martin Schoeberl
+    \item Redraw block diagram
+    \begin{itemize}
+      \item I/O after memory controller, memory interface
+      \item jopcpu
+      \item B goes to memory contrller
+      \item Method instead of Bytecode cache
+    \end{itemize}
+    \item instruction frequency of Kfl, Lift and UDP/IP into Java
+        benchmark section
+\end{itemize}
+
+\subsection{Minor Change Ideas}
+
+\begin{itemize}
+  \item Perhaps the formulaes from Chapter~\ref{chap:rtgc} in an
+      appendix (including the changes in the Outline)
+  \item Add references to the work that is only described in the
+      thesis.
+  \item list Makefile targets and variables
+  \item JOP configurations should be in its own section instead
+      of the design flow.
+\end{itemize}
+
+\subsection{Editorial Stuff}
+
+\begin{itemize}
+  \item check java* fonts -- has been 9pt for the green book
+  \item check figure sizes for the orange book size
+  \item unbounded vs. unbound in the whole test
+  \item removed 'proposed'
+  \item the WCET analysis -- WCET analysis (for all analysis)
+  \item missing commas
+  \item adjective 'ly'
+  \item articles (the, a)
+  \item compatible \emph{with}
+  \item IO to I/O
+\end{itemize}
+
+\section{Additional Sections}
+
+\begin{itemize}
+    \item VHDL Hello world with cycore
+    \item RTS Introduction (based on thesis intro)
+    \item SCJ definition (+ implementation)
+    \item (Mission modes + implementation)
+    \item Teaching (aids)
+    \item Examples section
+    \begin{itemize}
+        \item RtThread examples
+        \item ejip examples
+        \item low-level access
+    \end{itemize}
+    \item About boards (Baseio, dspio,...)
+    \item OOHW copy
+    \item HWO copy or low level access w Native.rdMem()
+    \item restructure with background info and related work in
+        each chapter
+    \item Document design alternatives you didn't take and why
+        you didn't take them
+    \item Javadoc of some classes
+    \item Embedded Java section
+    \begin{itemize}
+        \item Add Sun/IBM solution to the class initialization issue in
+        Chapter~\ref{chap:rtjava} and a detailed description how JOPizer
+        handles it. Give a simple example of a cyclic dependency.
+        \item Check if the Micro Edition layers are still used by
+        Sun
+        \item check the Sun statement on profiles and provide a
+        reference
+        \item add PhoneME
+        \item Still only one profile (MIDP) defined for the CLDC?
+        \item Check if CDC definition is still true
+        \item RTSJ implementations: add Angelo and York to jRate and
+        additional RTSJ implementations (aicas, IBM, appogee, Sun)
+        \item add SCJ in Subsets of the RTSJ
+        \item check status of JSR-50
+    \end{itemize}
+    \item JOP Runtime System
+    \begin{itemize}
+        \item SCJ to the real-time profile (plus implementation) --
+        the JTRES text (Jan!) is commented out in the handbook
+        \item Update object, array, and class layout!
+    \end{itemize}
+    \item Describe ejip (it's now commented out in handbook in intro)
+    \item Update performance section with actual numbers
+    \item Add interrupt controller description
+    \begin{itemize}
+        \item use text from oohw paper for
+    the explanation of the benchmark
+        \item own jbe section?
+        \item picoJava, jamuth
+    \end{itemize}
+    \item Update WCET chapter with JTRES paper and references to
+    Elena and Trevors work + further reading section
+    \item IFAC paper into application section
+    \item Related Work
+    \begin{itemize}
+        \item Cut it down
+        \item Add jHISC, jamuth
+        \item Add derived work (again)
+    \end{itemize}
+    \item SC Java
+\end{itemize}
+
+\subsection{Notes}
+
+Based in thesis:
+\begin{description}
+    \item[-] too much scientific stuff
+    \item[+-] Change related work to comparison
+    \item[+] HOTOs
+    \item[+] Internal docu
+\end{description}
+
+Copy stuff from JSA paper. However, only paragraphs to avoid
+\emph{copyright issues}.
+
+\chapter{DONE}
+
+\begin{itemize}
+  \item Green book corrections of
+  \begin{itemize}
+    \item Chapter~\ref{chap:intro}
+    \item Chapter~\ref{chap:build}
+    \item Chapter~\ref{chap:java}
+    \item Chapter~\ref{chap:rtjava} (removed)
+       \item Some text from Chapter~\ref{chap:rtjava} into
+           the embedded section of Chapter~\ref{chap:java},
+           Intro from it as part of the history section
+
+  \end{itemize}
+\end{itemize}
+
+\chapter{TODO for the 2nd Edition}
+
+\chapter{Other Stuff}
+
+\section{Publishing the Book}
+
+Target is real book with ISBN (= publication).
+
+\begin{itemize}
+    \item \url{http://www.createspace.com/} no setup, no
+        copyright transfer
+    \item \url{http://www.virtualbookworm.com/} \$ 360 -- \$ 440, incl. Amazon only, 4 computer
+    books, form mail sent, e-mail sent
+    \item \url{http://www.authorhouse.com/} \$ 700.- incl. Amazon,
+    no control on layout, form mail sent
+    \item \url{http://www.wingspanpress.com/} \$ 500 incl. Amazon,
+    no computer books, e-mail possible
+    \item \url{http://www.pagefreepublishing.com/} form mail sent,
+    e-mail sent
+    \item \url{http://www.aventinepress.com/} e-mail sent
+    \item \url{http://www.iuniverse.com/} \$ 399,- (\$ 599,- incl.
+    Amazon), Author discount, not many computer related books (old
+    topics) -- e-mail only possible with a Friends name and address!
+    \item \url{http://trafford.com/}, EUR 750,-(\$ 1600,- incl. Amazon), EUR 11,- per
+    book, some computer related books
+    \item \url{http://www.booksurgepages.com/amzn/ondemand/}
+    \item \url{http://www.booksurge.com/} e-mail sent \$ 300.-
+\end{itemize}
+
+Wishlist:
+\begin{itemize}
+    \item ISBN
+    \item A publisher who has serious technical books - no pornography!
+    \item Cheap upfront
+    \item Order possible from Amazon
+    \item Cheap order for myself
+    \item Right to sell it myself
+\end{itemize}
+
+Send an e-mail and ask following questions:
+\begin{itemize}
+    \item Can I provide my own layout (submitting a PDF)?
+    \item Can I still provide a free PDF version of my book on my
+    web site?
+    \item Can I update the content of the book (new edition)?
+    \item Can I sell the book myself?
+    \item Add a link to the manuscript.
+\end{itemize}
+
+No go's:
+\begin{itemize}
+    \item \url{http://www.lulu.com/} cheap \$ 99, but not clearely
+    listed, freedom (e.g.\ GNU licence), no Amazon
+    \item \url{http://www2.xlibris.com/} fixed layout
+    \item http://superiorbooks.com/
+    \item http://www.ubooks.de/
+\end{itemize}
+
+
+
+\section{A Possible Structure of the Book}
+
+\begin{itemize}
+    \item Introduction
+    \item A Quick Tour of JOP
+
+    \begin{itemize}
+        \item Intro what JOP is
+        \item A Quick Start (Hello World) or Getting Started
+        \item A Short History
+        \item About this handbook (based on, organization)
+        \item VHDL Hello World
+    \end{itemize}
+    \item Architecture (HW)
+    \item Architecture (SW)
+    \item Build.pdf
+    \item Source organization
+    \item Background information
+    \begin{itemize}
+        \item JVM
+        \item GC
+        \item Related Work
+        \item Real-time systems
+    \end{itemize}
+    \item WCET
+    \item Real-time threads
+    \item Tools
+    \begin{itemize}
+        \item JOPizer
+        \item WCET Analyzer
+    \end{itemize}
+    \item JDK + support
+    \item Library: util, ejip, YAFFS,...
+    \item Board descriptions
+    \item Appendix
+    \begin{itemize}
+        \item Microcode
+        \item Instruction timing
+        \item Javadoc for classes
+    \end{itemize}
+    \item Further reading (related work) at the end of each chapter
+    \item Browse other books for structural ideas
+\end{itemize}
+
+\section{JOPizer Description}
+\index{JOPizer}
+
+JOPizer is the tool to link all Java classes and translate the
+application to a executable image for JOP. The output is a .jop file
+(in ASCII with comments to debug the class structure). The
+executable image is either downloaded via serial or USB interface of
+programmed into a Flash. The image is located at address 0.
+
+JOPizer performs following steps:
+
+\begin{enumerate}
+    \item Find the transitive hull of all needed classes starting
+    from the class that contains the main method.
+    \item ...
+    \item Find a static class initializer order
+    (\code{ClinitOrder}). Throws an error on a cyclic dependency.
+    \item Dump the application to the image file
+\end{enumerate}
+
+\section{YAFFS Notes}
+
+\begin{itemize}
+    \item new in yaffs2.port.yaffs\_guts\_C.yaffs\_GetObjectName(...)
+\end{itemize}
+
+\section{Debugger Description}
+
+\begin{verbatim}
+
+------------------------------------------------------------
+Attachments: - Modified_jop_files.zip
+  Some modified files needed to run the debugger
+
+  Changed files:
+  Makefile
+  java/tools/source/com/jopdesign/build/MethodInfo.java
+  java/tools/source/com/jopdesign/build/JOPizer.java
+  java/tools/source/com/jopdesign/build/ClassInfo.java
+  (there's no need to change RtThreadImpl anymore)
+
+  Added (to the development tree):
+  java/target/source/test/JopDebugKernel/
+  java/tools/dist/lib/JopDebugger.jar   (after "make tools" run)
+
+- JopDebugger.zip
+  Latest development version of the debugger module.
+
+- JopDebugKernel.zip
+  This will run inside JOP.
+
+
+  The changes in the makefile are to allow it to debug JOPizer and JopSim
+  through the network and to create the symbol file.
+  The last change modify one step in the build process,
+  to call JOPizer from another class which will create the symbol file
+  right after JOPizer runs.
+
+------------------------------------------------------------
+
+
+
+Instructions to run the example:
+
+- Open two shells (one for Jop, other for the JopDebugger) - Shell
+1: Download a clean development tree from Jop CVS.
+
+- Copy modified Jop classes (from Modified_jop_files.zip)
+  in the correct folders.
+  Those small changes I did in the tool set were just to allow
+  serialization and access to some fields.
+  Copy also the "Makefile" included over your Makefile.
+
+- Build the modified tools: make tools
+
+- Shell 2:
+  Decompress the attached JopDebugger.zip in a sibling folder.
+
+- Build the project lib: cd JopDebugger; ant lib
+
+- Copy the file JopDebugger.jar into java\tools\dist\lib
+  Remeber that if you run "make tools" it will erase the
+  lib folder, which will remove JopDebugger.jar.
+
+- Unpack "JopDebugKernel.zip" and move it into
+  jop\java\target\src\test\JopDebugKernel
+  (but don't put it into JopDebugKernel\JopDebugKernel,
+  this is a common mistake).
+
+- Run the line below.
+  This test will run a stand-alone test under JopSim. If it runs and print some
+  simple messages, then it's possible to test the methods which access JOP's
+  internal structures.
+
+  make jsim -e P1=test/JopDebugKernel/source P2=debug P3=TestJopDebugKernel
+
+This will build all the system as usual: compile all, run JOPizer,
+bild the symbols file and launch JopSim.
+
+However, there are a few differences in this makefile. 1) It allows
+anyone to debug JopSim remotely (manually changing the makefile) 2)
+It allows anyone to debug JOPizer remotely (manually changing the
+makefile) 3) The modified makefile also change the build process to
+store a symbol table by calling JOPizer from another tool (symbol
+storage and loading is working) 4) It can connect JopSim to the
+network by calling JopSim from another tool (a JopServer)
+
+
+This test will run for a few seconds
+ while and then will stop to wait for input, showing the text below.
+
+ ----------------------------------------
+ test4_read_write()
+ Debug server. Current stack depth: 2
+ ----------------------------------------
+
+When this happens, force it to stop (ctrl-C). The remaining of the
+test needs commands from a server (through the network), explained
+next.
+
+
+To connect JopSim to the network using JopServer:
+--------------------------------------------------
+
+- Open the .jop file created in the previous run.
+
+- Locate two method pointers:
+  search for: "TestJopDebugKernel.printValue(I)V" and also
+  for "TestJopDebugKernel.printLine()V".
+
+- Update the file com.jopdesign.debug.jdwp.test.TestJopServer
+  (lines 152 and 162) with those addresses.
+
+- Run the line below:
+
+  make jsim_server -e P1=test/JopDebugKernel/source P2=debug P3=TestJopDebugKernel
+
+- Wait until the server is running.
+  It will print a message: "Server launched at port: 8004"
+
+- After the Jop server start running, go back to the other shell and
+  launch the ant target "TestJopServer". It should recompile the modified
+  java sources and launch the test.
+
+  ant TestJopServer
+
+If the methods addresses are not corrected, there is a big chance
+that the test will break with an error message like this: "Calling
+method now: make: *** [jsim] Error 25584194"
+
+Everytime JOPizer run, new method addresses are calculated when
+classes change. This error is just due to a couple wrong method
+pointers. So, if you want to change anything in the code which will
+run inside Jop, it's necessary to fix this test (or comment the
+method invocation calls). Otherwise it will break.
+
+To fix method pointers: - Open the .jop file - Search for the two
+method signatures printed by the TestJopServer class - Extract
+manually the two method addresses (hey, this is not finished yet;)
+it's just a test, you know). - Open class
+com.jopdesign.debug.jdwp.test.TestJopServer. - Change the code by
+pasting the method addresses
+
+Launch again the JopServer using make Run again TestJopServer.
+
+You may see that it's working by choosing other static void methods
+to call. This works for static methods with one or zero parameters
+only. Support for more is very easy to implement but was not needed
+now, so I didn't (yet). Returned values are currently ignored.
+
+--------------------------------------------------------------------------------
+Well, that's it. There are a lot of details and other small tools,
+but I hope now you have a much better idea about how my development
+effort is going until here.
+
+Those changes were tested on JOP from Sep. 11, so unless there was
+some big change in the last days, they should work ok on the latest
+version.
+
+The first test I mentioned shows you evidence of methods that access
+JOP structures.
+
+The test with JopServer shows that it's possible to connect JopSim
+to the network and send/receive commands which access and change JOP
+internal structures. Since this was accomplished without changing
+JopSim, it should be possible (at least in thery) to switch it with
+an FPGA running JOP and get the same results.
+
+This shows it's possible to control JOP from the network and perform
+some tasks related to debugging (such as get/set values).
+
+It's possible also to run another test which launch a real debugger
+which connects to a server, handshake and receive JDWP commands. But
+this test still does not do much, so I don't know if you want to see
+it.
+
+There's also a test to check the symbol file content.
+
+About the JOP side, it's still necessary to write code to set/reset
+breakpoints and handle interruptions properly.
+
+It's also necessary to glue together the symbol file, the Jop debug
+server and the JDWP module to control debugging. In short, it's a
+lot of work.
+
+If you need help to run or test it or if you have questions, please
+let me know.
+
+Regards, Paulo
+
+
+\end{verbatim}
+
+
+\section{TODO JOP}
+
+\begin{itemize}
+    \item Javadoc for the handbook
+\end{itemize}

@@ -1,0 +1,4 @@
+vhdl work "../memo_s4_s18.vhd"
+vhdl work "../../encoder/ham_enc.vhd"
+vhdl work "../../decoder/ham_decod.vhd"
+vhdl work "../../top/ham_top.vhd"

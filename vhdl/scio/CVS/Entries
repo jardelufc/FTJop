@@ -1,0 +1,31 @@
+/cmpsync.vhd/1.7/Sun Feb 24 16:03:44 2008//
+/fifo.vhd/1.2/Sat Feb 23 23:18:46 2008//
+/sc_cnt.vhd/1.6/Sat Feb 23 23:18:46 2008//
+/sc_control_channel.vhd/1.3/Wed Sep  3 21:08:36 2008//
+/sc_fpu.vhd/1.3/Sat Feb 23 23:18:46 2008//
+/sc_isa.vhd/1.2/Sat Feb 23 23:18:46 2008//
+/sc_lego.vhd/1.4/Sat Feb 23 23:18:46 2008//
+/sc_mac.vhd/1.3/Sat Feb 23 23:18:46 2008//
+/sc_sigdel.vhd/1.3/Sat Feb 23 23:18:46 2008//
+/sc_spi.vhd/1.1/Mon Jan 14 09:15:07 2008//
+/sc_sys.vhd/1.13/Fri Jun 20 15:43:05 2008//
+/sc_test_slave.vhd/1.2/Sat Feb 23 23:18:46 2008//
+/sc_test_top.vhd/1.2/Sat Feb 23 23:18:46 2008//
+/sc_uart.vhd/1.7/Sat Feb 23 23:18:46 2008//
+/sc_uart_tal.vhd/1.3/Sat Feb 23 23:18:46 2008//
+/sc_usb.vhd/1.4/Sat Feb 23 23:18:46 2008//
+/scio_baseio.vhd/1.13/Fri Jun 20 15:43:05 2008//
+/scio_bg.vhd/1.14/Fri Jun 20 15:43:05 2008//
+/scio_dspio.vhd/1.17/Fri Jun 20 15:43:05 2008//
+/scio_dspiomin.vhd/1.12/Fri Jun 20 15:43:05 2008//
+/scio_jeopard.vhd/1.3/Sat Aug  9 12:40:01 2008//
+/scio_lego.vhd/1.14/Fri Jun 20 15:43:05 2008//
+/scio_mikjen.vhd/1.9/Fri Jun 20 15:43:05 2008//
+/scio_min.vhd/1.15/Fri Jun 20 15:43:05 2008//
+/scio_min_fpu.vhd/1.10/Fri Jun 20 15:43:05 2008//
+/scio_rasmus.vhd/1.10/Fri Jun 20 15:43:05 2008//
+/scio_skit.vhd/1.3/Tue Aug 19 11:03:49 2008//
+/scio_usbmin_fpu.vhd/1.5/Fri Jun 20 15:43:05 2008//
+/sigdel.vhd/1.2/Sat Feb 23 23:18:46 2008//
+D/lego////
+D/sim////

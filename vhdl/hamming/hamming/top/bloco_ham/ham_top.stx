@@ -1,0 +1,41 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.61 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/ham_top is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/ham_top.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd".
+WARNING:HDLParsers:3607 - Unit work/ham_top/Behavioral is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/ham_top.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd".
+WARNING:HDLParsers:3607 - Unit work/ham_decod is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd".
+WARNING:HDLParsers:3607 - Unit work/ham_decod/behavior is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd".
+WARNING:HDLParsers:3607 - Unit work/ham_enc is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd".
+WARNING:HDLParsers:3607 - Unit work/ham_enc/Behavioral is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd".
+WARNING:HDLParsers:3607 - Unit work/bhc is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd".
+WARNING:HDLParsers:3607 - Unit work/bhc/sim is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd".
+WARNING:HDLParsers:3607 - Unit work/bhc32 is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd".
+WARNING:HDLParsers:3607 - Unit work/bhc32/sim is now defined in a different file.  It was defined in "C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd", and is now defined in "C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd".
+Compiling vhdl file "C:/David/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd" in Library work.
+Entity <ham_enc> compiled.
+Entity <ham_enc> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/David/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" in Library work.
+Architecture behavior of Entity ham_decod is up to date.
+Compiling vhdl file "C:/David/LESC/Hamming/hamming(15-09)/top/bloco_ham/cache32.vhd" in Library work.
+Architecture sim of Entity bhc32 is up to date.
+Compiling vhdl file "C:/David/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd" in Library work.
+Architecture sim of Entity bhc is up to date.
+Compiling vhdl file "C:/David/LESC/Hamming/hamming(15-09)/top/ham_top.vhd" in Library work.
+Entity <ham_top> compiled.
+Entity <ham_top> (Architecture <behavioral>) compiled.
+CPU : 0.86 / 1.47 s | Elapsed : 1.00 / 2.00 s
+ 
+--> 
+
+Total memory usage is 111244 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

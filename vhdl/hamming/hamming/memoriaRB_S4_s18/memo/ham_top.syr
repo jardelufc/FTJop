@@ -1,0 +1,1615 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.33 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.33 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: ham_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ham_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ham_top"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : ham_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : ham_top.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd" in Library work.
+Architecture behavioral of Entity ham_enc is up to date.
+Compiling vhdl file "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" in Library work.
+Architecture behavior of Entity ham_decod is up to date.
+Compiling vhdl file "C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd" in Library work.
+Architecture sim of Entity bhc is up to date.
+Compiling vhdl file "C:/LESC/Hamming/hamming(15-09)/top/ham_top.vhd" in Library work.
+Entity <ham_top> compiled.
+Entity <ham_top> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ham_top> in library <work> (architecture <Behavioral>) with generics.
+	jpc_width = 12
+
+Analyzing hierarchy for entity <ham_enc> in library <work> (architecture <behavioral>) with generics.
+	jpc_width = 12
+
+Analyzing hierarchy for entity <ham_decod> in library <work> (architecture <behavior>) with generics.
+	jpc_width = 12
+
+Analyzing hierarchy for entity <bhc> in library <work> (architecture <sim>) with generics.
+	jpc_width = 12
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <ham_top> in library <work> (Architecture <Behavioral>).
+	jpc_width = 12
+WARNING:Xst:819 - "C:/LESC/Hamming/hamming(15-09)/top/ham_top.vhd" line 114: The following signals are missing in the process sensitivity list:
+   data_dec.
+Entity <ham_top> analyzed. Unit <ham_top> generated.
+
+Analyzing generic Entity <ham_enc> in library <work> (Architecture <behavioral>).
+	jpc_width = 12
+WARNING:Xst:819 - "C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd" line 44: The following signals are missing in the process sensitivity list:
+   enable, data, addr_in.
+INFO:Xst:2679 - Register <temp<1>> in unit <ham_enc> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp<2>> in unit <ham_enc> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp<4>> in unit <ham_enc> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp<8>> in unit <ham_enc> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ham_enc> analyzed. Unit <ham_enc> generated.
+
+Analyzing generic Entity <ham_decod> in library <work> (Architecture <behavior>).
+	jpc_width = 12
+WARNING:Xst:790 - "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 85: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 86: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 89: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd" line 45: The following signals are missing in the process sensitivity list:
+   enable, data.
+INFO:Xst:2679 - Register <error> in unit <ham_decod> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <ham_decod> analyzed. Unit <ham_decod> generated.
+
+Analyzing generic Entity <bhc> in library <work> (Architecture <sim>).
+	jpc_width = 12
+Entity <bhc> analyzed. Unit <bhc> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ham_enc>.
+    Related source file is "C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd".
+WARNING:Xst:646 - Signal <D> is assigned but never used.
+WARNING:Xst:646 - Signal <H> is assigned but never used.
+WARNING:Xst:646 - Signal <temp> is assigned but never used.
+WARNING:Xst:737 - Found 16-bit latch for signal <Ham_out>.
+WARNING:Xst:737 - Found 10-bit latch for signal <addr_out>.
+WARNING:Xst:737 - Found 1-bit latch for signal <rdy_decod>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ability>.
+    Found 1-bit xor3 for signal <$xor0000> created at line 119.
+    Found 1-bit xor3 for signal <$xor0001> created at line 117.
+    Found 1-bit xor3 for signal <$xor0002> created at line 115.
+    Found 1-bit xor5 for signal <$xor0003> created at line 113.
+    Found 1-bit xor3 for signal <$xor0004> created at line 105.
+    Found 1-bit xor3 for signal <$xor0005> created at line 103.
+    Found 1-bit xor3 for signal <$xor0006> created at line 101.
+    Found 1-bit xor5 for signal <$xor0007> created at line 99.
+    Found 1-bit xor4 for signal <$xor0008> created at line 91.
+    Found 1-bit xor4 for signal <$xor0009> created at line 89.
+    Found 1-bit xor3 for signal <$xor0010> created at line 87.
+    Found 1-bit xor3 for signal <$xor0011> created at line 85.
+    Found 1-bit xor3 for signal <$xor0012> created at line 77.
+    Found 1-bit xor3 for signal <$xor0013> created at line 75.
+    Found 1-bit xor3 for signal <$xor0014> created at line 73.
+    Found 1-bit xor5 for signal <$xor0015> created at line 71.
+    Found 1-bit xor2 for signal <xor0000$xor0000> created at line 119.
+    Found 1-bit xor2 for signal <xor0001$xor0000> created at line 117.
+    Found 1-bit xor2 for signal <xor0004$xor0000> created at line 105.
+    Found 1-bit xor2 for signal <xor0005$xor0000> created at line 103.
+    Found 1-bit xor3 for signal <xor0010$xor0000> created at line 87.
+    Found 1-bit xor2 for signal <xor0012$xor0000> created at line 77.
+    Found 1-bit xor2 for signal <xor0013$xor0000> created at line 75.
+    Summary:
+	inferred  17 Xor(s).
+Unit <ham_enc> synthesized.
+
+
+Synthesizing Unit <ham_decod>.
+    Related source file is "C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd".
+WARNING:Xst:646 - Signal <H1> is assigned but never used.
+WARNING:Xst:646 - Signal <H2> is assigned but never used.
+WARNING:Xst:646 - Signal <H3> is assigned but never used.
+WARNING:Xst:646 - Signal <H4> is assigned but never used.
+WARNING:Xst:646 - Signal <NewHam> is assigned but never used.
+WARNING:Xst:646 - Signal <D> is assigned but never used.
+WARNING:Xst:646 - Signal <temp> is assigned but never used.
+WARNING:Xst:646 - Signal <position> is assigned but never used.
+WARNING:Xst:737 - Found 8-bit latch for signal <Ham_out>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ready>.
+    Found 1-bit xor4 for signal <position$xor0000> created at line 74.
+    Found 1-bit xor4 for signal <position$xor0001> created at line 72.
+    Found 1-bit xor4 for signal <position$xor0002> created at line 70.
+    Found 1-bit xor6 for signal <position$xor0003> created at line 68.
+    Found 1-bit xor2 for signal <position$xor0004> created at line 74.
+    Found 1-bit xor2 for signal <position$xor0005> created at line 72.
+    Summary:
+	inferred   4 Xor(s).
+Unit <ham_decod> synthesized.
+
+
+Synthesizing Unit <bhc>.
+    Related source file is "C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd".
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_933>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_928>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_883>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_878>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_89>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_94>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_934>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_929>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_884>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_879>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_95>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_940>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_935>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_890>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_885>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_96>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_941>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_936>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_891>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_886>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_97>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_942>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_937>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_892>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_887>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_98>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_943>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_938>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_893>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_888>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_99>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_944>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_939>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_894>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_889>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_950>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_945>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_895>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_951>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_946>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_896>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_952>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_947>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_897>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_953>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_948>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_898>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_954>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_949>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_899>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_960>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_955>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_961>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_956>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_962>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_957>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_963>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_958>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_964>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_959>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_970>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_965>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_971>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_966>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_972>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_967>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_973>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_968>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_974>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_969>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_980>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_975>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_981>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_976>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_982>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_977>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_983>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_978>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_984>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_979>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_990>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_985>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_991>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_986>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_992>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_987>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_993>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_988>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_994>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_989>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_995>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_996>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_997>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_998>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_999>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_0>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_2>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_3>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_4>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_5>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_6>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_7>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_8>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_9>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_100>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_101>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_102>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_103>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_104>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_105>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_110>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_106>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_111>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_107>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_112>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_108>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_113>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_109>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_114>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_115>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_120>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_116>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_121>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_117>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_122>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_118>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_123>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_119>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_124>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_125>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_130>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_126>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_131>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_127>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_132>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_128>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_133>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_129>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_134>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_135>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_140>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_136>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_141>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_137>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_142>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_138>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_143>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_139>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_144>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_200>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_145>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_150>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_201>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_146>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_151>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_202>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_147>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_152>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_203>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_148>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_153>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_204>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_149>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_154>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_210>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_205>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_155>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_160>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_211>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_206>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_156>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_161>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_212>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_207>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_157>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_162>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_213>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_208>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_158>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_163>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_214>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_209>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_159>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_164>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_220>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_215>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_165>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_170>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_221>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_216>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_166>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_171>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_222>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_217>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_167>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_172>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_223>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_218>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_168>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_173>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_224>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_219>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_169>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_174>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_230>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_225>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_175>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_180>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_231>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_226>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_176>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_181>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_232>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_227>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_177>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_182>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_233>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_228>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_178>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_183>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_234>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_229>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_179>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_184>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_240>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_235>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_190>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_185>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_241>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_236>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_191>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_186>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_242>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_237>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_192>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_187>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_243>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_238>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_193>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_188>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_244>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_239>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_194>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_189>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_300>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_250>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_245>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_195>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_301>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_251>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_246>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_196>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_302>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_252>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_247>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_197>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_303>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_253>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_248>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_198>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1000>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_304>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_254>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_249>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_199>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1001>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_310>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_305>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_260>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_255>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1002>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_311>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_306>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_261>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_256>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1003>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_312>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_307>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_262>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_257>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1004>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_313>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_308>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_263>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_258>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1010>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1005>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_314>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_309>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_264>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_259>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1011>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1006>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_320>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_315>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_270>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_265>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1012>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1007>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_321>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_316>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_271>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_266>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1013>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1008>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_322>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_317>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_272>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_267>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1014>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1009>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_323>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_318>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_273>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_268>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1020>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1015>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_324>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_319>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_274>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_269>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1021>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1016>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_330>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_325>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_280>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_275>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1022>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1017>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_331>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_326>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_281>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_276>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1023>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1018>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_332>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_327>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_282>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_277>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_1019>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_333>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_328>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_283>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_278>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_334>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_329>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_284>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_279>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_340>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_335>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_290>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_285>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_341>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_336>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_291>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_286>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_342>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_337>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_292>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_287>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_343>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_338>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_293>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_288>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_344>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_339>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_294>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_289>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_350>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_345>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_295>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_400>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_351>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_346>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_296>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_401>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_352>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_347>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_297>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_402>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_353>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_348>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_298>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_403>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_354>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_349>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_299>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_404>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_360>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_355>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_405>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_410>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_361>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_356>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_406>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_411>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_362>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_357>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_407>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_412>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_363>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_358>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_408>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_413>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_364>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_359>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_409>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_414>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_370>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_365>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_415>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_420>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_371>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_366>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_416>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_421>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_372>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_367>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_417>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_422>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_373>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_368>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_418>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_423>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_374>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_369>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_419>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_424>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_380>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_375>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_425>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_430>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_381>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_376>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_426>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_431>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_382>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_377>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_427>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_432>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_383>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_378>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_428>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_433>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_379>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_384>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_429>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_434>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_385>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_390>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_435>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_440>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_386>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_391>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_436>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_441>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_387>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_392>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_437>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_442>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_388>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_393>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_438>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_443>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_389>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_394>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_439>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_444>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_395>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_445>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_450>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_500>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_396>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_446>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_451>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_501>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_397>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_447>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_452>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_502>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_398>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_448>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_453>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_503>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_399>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_449>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_454>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_504>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_455>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_460>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_505>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_510>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_456>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_461>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_506>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_511>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_457>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_462>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_507>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_512>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_458>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_463>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_508>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_513>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_459>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_464>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_509>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_514>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_465>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_470>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_515>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_520>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_466>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_471>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_516>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_521>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_467>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_472>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_517>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_522>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_468>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_473>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_518>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_523>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_469>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_474>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_519>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_524>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_475>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_480>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_525>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_530>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_476>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_481>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_526>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_531>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_477>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_482>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_527>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_532>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_478>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_483>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_528>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_533>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_479>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_484>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_529>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_534>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_485>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_490>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_535>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_540>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_486>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_491>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_536>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_541>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_487>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_492>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_537>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_542>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_488>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_493>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_538>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_543>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_489>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_494>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_539>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_544>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_495>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_545>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_550>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_600>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_496>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_546>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_551>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_601>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_497>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_547>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_552>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_602>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_498>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_548>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_553>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_603>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_499>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_549>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_554>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_604>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_555>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_560>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_605>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_610>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_556>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_561>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_606>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_611>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_557>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_562>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_607>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_612>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_558>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_563>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_608>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_613>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_559>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_564>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_609>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_614>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_565>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_570>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_615>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_620>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_566>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_571>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_616>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_621>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_567>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_572>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_617>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_622>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_568>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_573>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_618>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_623>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_569>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_574>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_619>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_624>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_575>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_580>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_625>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_630>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_576>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_581>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_626>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_631>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_577>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_582>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_627>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_632>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_578>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_583>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_628>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_633>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_579>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_584>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_629>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_634>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_585>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_590>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_635>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_640>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_586>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_591>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_636>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_641>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_587>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_592>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_637>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_642>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_588>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_593>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_638>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_643>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_589>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_594>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_639>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_644>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_595>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_645>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_650>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_700>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_596>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_646>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_651>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_701>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_597>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_647>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_652>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_702>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_598>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_648>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_653>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_703>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_599>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_649>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_654>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_704>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_655>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_660>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_705>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_710>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_656>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_661>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_706>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_711>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_657>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_662>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_707>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_712>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_658>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_663>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_708>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_713>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_659>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_664>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_709>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_714>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_665>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_670>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_715>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_720>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_666>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_671>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_716>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_721>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_667>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_672>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_717>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_722>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_668>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_673>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_718>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_723>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_669>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_674>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_719>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_724>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_675>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_680>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_725>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_730>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_676>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_681>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_726>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_731>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_677>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_682>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_727>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_732>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_678>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_683>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_728>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_733>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_679>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_684>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_729>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_734>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_685>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_690>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_735>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_740>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_686>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_691>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_736>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_741>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_687>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_692>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_737>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_742>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_688>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_693>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_738>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_743>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_689>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_694>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_739>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_744>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_10>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_800>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_695>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_745>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_750>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_11>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_801>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_696>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_746>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_751>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_12>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_802>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_697>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_747>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_752>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_13>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_803>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_698>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_748>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_753>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_14>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_804>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_699>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_749>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_754>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_15>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_20>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_810>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_805>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_755>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_760>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_16>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_21>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_811>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_806>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_756>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_761>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_17>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_22>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_812>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_807>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_757>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_762>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_18>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_23>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_813>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_808>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_758>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_763>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_19>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_24>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_814>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_809>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_764>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_759>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_25>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_30>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_820>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_815>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_770>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_765>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_26>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_31>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_821>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_816>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_771>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_766>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_27>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_32>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_822>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_817>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_772>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_767>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_28>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_33>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_823>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_818>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_773>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_768>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_29>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_34>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_824>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_819>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_774>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_769>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_35>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_40>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_830>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_825>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_780>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_775>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_36>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_41>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_831>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_826>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_781>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_776>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_37>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_42>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_832>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_827>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_782>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_777>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_38>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_43>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_833>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_828>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_783>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_778>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_39>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_44>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_834>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_829>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_784>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_779>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_45>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_50>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_840>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_835>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_790>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_785>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_46>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_51>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_841>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_836>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_791>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_786>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_47>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_52>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_842>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_837>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_792>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_787>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_48>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_53>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_843>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_838>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_793>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_788>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_49>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_54>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_844>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_839>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_794>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_789>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_55>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_60>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_900>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_850>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_845>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_795>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_56>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_61>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_901>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_851>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_846>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_796>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_57>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_62>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_902>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_852>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_847>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_797>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_58>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_63>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_903>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_853>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_848>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_798>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_59>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_64>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_904>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_854>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_849>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_799>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_65>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_70>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_910>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_905>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_860>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_855>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_66>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_71>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_911>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_906>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_861>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_856>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_67>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_72>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_912>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_907>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_862>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_857>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_68>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_73>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_913>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_908>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_863>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_858>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_69>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_74>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_914>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_909>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_864>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_859>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_75>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_80>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_920>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_915>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_870>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_865>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_76>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_81>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_921>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_916>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_871>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_866>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_77>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_82>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_922>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_917>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_872>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_867>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_78>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_83>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_923>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_918>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_873>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_868>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_79>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_84>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_924>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_919>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_874>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_869>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_85>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_90>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_930>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_925>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_880>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_875>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_86>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_91>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_931>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_926>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_881>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_876>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_87>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_92>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_932>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_927>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_882>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_877>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_88>.
+WARNING:Xst:737 - Found 16-bit latch for signal <ram_93>.
+    Found 4-bit 4-to-1 multiplexer for signal <q>.
+    Found 16-bit 1024-to-1 multiplexer for signal <ram$mux0000> created at line 97.
+    Found 16-bit register for signal <reg_data>.
+    Found 12-bit register for signal <reg_rd_addr>.
+    Found 10-bit register for signal <reg_wr_addr>.
+    Found 1-bit register for signal <reg_wr_en>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+	inferred  20 Multiplexer(s).
+Unit <bhc> synthesized.
+
+
+Synthesizing Unit <ham_top>.
+    Related source file is "C:/LESC/Hamming/hamming(15-09)/top/ham_top.vhd".
+Unit <ham_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+# Latches                                              : 1030
+ 1-bit latch                                           : 3
+ 10-bit latch                                          : 1
+ 16-bit latch                                          : 1025
+ 8-bit latch                                           : 1
+# Multiplexers                                         : 2
+ 16-bit 1024-to-1 multiplexer                          : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 29
+ 1-bit xor2                                            : 8
+ 1-bit xor3                                            : 12
+ 1-bit xor4                                            : 5
+ 1-bit xor5                                            : 3
+ 1-bit xor6                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx92i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Latches                                              : 1030
+ 1-bit latch                                           : 3
+ 10-bit latch                                          : 1
+ 16-bit latch                                          : 1025
+ 8-bit latch                                           : 1
+# Multiplexers                                         : 2
+ 16-bit 1024-to-1 multiplexer                          : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 29
+ 1-bit xor2                                            : 8
+ 1-bit xor3                                            : 12
+ 1-bit xor4                                            : 5
+ 1-bit xor5                                            : 3
+ 1-bit xor6                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ham_top> ...
+
+Optimizing unit <ham_enc> ...
+
+Optimizing unit <ham_decod> ...
+
+Optimizing unit <bhc> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ham_top, actual ratio is 713.
+Optimizing block <ham_top> to meet ratio 100 (+ 5) of 1920 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <ham_top>, final ratio is 713.
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_2 connected to a primary input has been replicated
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_3 connected to a primary input has been replicated
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_4 connected to a primary input has been replicated
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_5 connected to a primary input has been replicated
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_6 connected to a primary input has been replicated
+FlipFlop cache/reg_data_0 has been replicated 2 time(s)
+FlipFlop cache/reg_data_1 has been replicated 2 time(s)
+FlipFlop cache/reg_data_10 has been replicated 2 time(s)
+FlipFlop cache/reg_data_11 has been replicated 2 time(s)
+FlipFlop cache/reg_data_12 has been replicated 2 time(s)
+FlipFlop cache/reg_data_13 has been replicated 2 time(s)
+FlipFlop cache/reg_data_14 has been replicated 2 time(s)
+FlipFlop cache/reg_data_15 has been replicated 2 time(s)
+FlipFlop cache/reg_data_2 has been replicated 2 time(s)
+FlipFlop cache/reg_data_3 has been replicated 2 time(s)
+FlipFlop cache/reg_data_4 has been replicated 2 time(s)
+FlipFlop cache/reg_data_5 has been replicated 2 time(s)
+FlipFlop cache/reg_data_6 has been replicated 2 time(s)
+FlipFlop cache/reg_data_7 has been replicated 2 time(s)
+FlipFlop cache/reg_data_8 has been replicated 2 time(s)
+FlipFlop cache/reg_data_9 has been replicated 2 time(s)
+FlipFlop cache/reg_rd_addr_2 has been replicated 16 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_2 connected to a primary input has been replicated
+FlipFlop cache/reg_rd_addr_3 has been replicated 8 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_3 connected to a primary input has been replicated
+FlipFlop cache/reg_rd_addr_4 has been replicated 4 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_4 connected to a primary input has been replicated
+FlipFlop cache/reg_rd_addr_5 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_5 connected to a primary input has been replicated
+FlipFlop cache/reg_rd_addr_6 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop cache/reg_rd_addr_6 connected to a primary input has been replicated
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 102
+ Flip-Flops                                            : 102
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ham_top.ngr
+Top Level Output File Name         : ham_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 75
+
+Cell Usage :
+# BELS                             : 17562
+#      GND                         : 1
+#      LUT2                        : 1037
+#      LUT3                        : 8463
+#      LUT4                        : 129
+#      MUXF5                       : 4235
+#      MUXF6                       : 2112
+#      MUXF7                       : 1056
+#      MUXF8                       : 528
+#      VCC                         : 1
+# FlipFlops/Latches                : 16523
+#      FD                          : 101
+#      FDR                         : 1
+#      LDCE                        : 3
+#      LDE                         : 16384
+#      LDE_1                       : 34
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 75
+#      IBUF                        : 65
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                   13733  out of   1920   715% (*) 
+ Number of Slice Flip Flops:         16498  out of   3840   429% (*) 
+ Number of 4 input LUTs:              9629  out of   3840   250% (*) 
+ Number of IOs:                         75
+ Number of bonded IOBs:                 75  out of    173    43%  
+    IOB Flip Flops:                     25
+ Number of GCLKs:                        3  out of      8    37%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------+--------------------------+-------+
+Clock Signal                                    | Clock buffer(FF name)    | Load  |
+------------------------------------------------+--------------------------+-------+
+decod/Ham_out_and00011(encod/Ham_out_and00011:O)| BUFG(*)(encod/addr_out_9)| 34    |
+clk                                             | IBUF+BUFG                | 105   |
+cache/reg_wr_en1                                | BUFG                     | 16384 |
+------------------------------------------------+--------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------+------------------------+-------+
+Control Signal                                  | Buffer(FF name)        | Load  |
+------------------------------------------------+------------------------+-------+
+decod/Ham_out_and00011(encod/Ham_out_and00011:O)| NONE(encod/ability)    | 3     |
+------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 1.820ns (Maximum Frequency: 549.315MHz)
+   Minimum input arrival time before clock: 12.191ns
+   Maximum output required time after clock: 6.141ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.820ns (frequency: 549.315MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.820ns (Levels of Logic = 0)
+  Source:            encod/rdy_decod (LATCH)
+  Destination:       decod/ready (LATCH)
+  Source Clock:      clk falling
+  Destination Clock: clk falling
+
+  Data Path: encod/rdy_decod to decod/ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.745  encod/rdy_decod (encod/rdy_decod)
+     LDCE:GE                   0.524          decod/ready
+    ----------------------------------------
+    Total                      1.820ns (1.075ns logic, 0.745ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'decod/Ham_out_and00011'
+  Total number of paths / destination ports: 1917 / 68
+-------------------------------------------------------------------------
+Offset:              12.191ns (Levels of Logic = 10)
+  Source:            data_dec<6> (PAD)
+  Destination:       decod/Ham_out_5 (LATCH)
+  Destination Clock: decod/Ham_out_and00011 rising
+
+  Data Path: data_dec<6> to decod/Ham_out_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.715   1.074  data_dec_6_IBUF (data_dec_6_IBUF)
+     LUT4:I0->O            1   0.479   0.740  decod/Mxor_position_xor0003_xo<3>1 (decod/Mxor_position_xor0003_xo<3>)
+     LUT3:I2->O           13   0.479   1.289  decod/Mxor_position_xor0003_xo<4>1 (decod/position_xor0003)
+     LUT4:I0->O            1   0.479   0.851  decod/D_10_mux00011133_SW0 (N1286)
+     LUT4:I1->O            1   0.479   0.000  decod/D_10_mux00011154_F (N1294)
+     MUXF5:I0->O           1   0.314   0.740  decod/D_10_mux00011154 (decod/D_10_mux00011_map50)
+     LUT3:I2->O            1   0.479   0.740  decod/D_10_mux00011165 (decod/D_10_mux00011_map51)
+     LUT3:I2->O            8   0.479   0.980  decod/D_10_mux00011181 (decod/N0)
+     LUT4:I2->O            1   0.479   0.740  decod/D_10_mux00012_SW0 (N1292)
+     LUT4:I2->O            1   0.479   0.000  decod/D_10_mux00012 (decod/D_10_mux0001)
+     LDE_1:D                   0.176          decod/Ham_out_5
+    ----------------------------------------
+    Total                     12.191ns (5.037ns logic, 7.154ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 49 / 47
+-------------------------------------------------------------------------
+Offset:              3.943ns (Levels of Logic = 2)
+  Source:            clk (PAD)
+  Destination:       cache/reg_wr_en (FF)
+  Destination Clock: clk rising
+
+  Data Path: clk to cache/reg_wr_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.715   1.074  clk_IBUF (clk_IBUF1)
+     LUT2:I0->O            5   0.479   0.783  encod/Ham_out_and00011 (decod/Ham_out_and00011)
+     FDR:R                     0.892          cache/reg_wr_en
+    ----------------------------------------
+    Total                      3.943ns (2.086ns logic, 1.857ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            decod/ready (LATCH)
+  Destination:       ready (PAD)
+  Source Clock:      clk falling
+
+  Data Path: decod/ready to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.681  decod/ready (decod/ready)
+     OBUF:I->O                 4.909          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'decod/Ham_out_and00011'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            decod/Ham_out_7 (LATCH)
+  Destination:       Ham_out<7> (PAD)
+  Source Clock:      decod/Ham_out_and00011 rising
+
+  Data Path: decod/Ham_out_7 to Ham_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.551   0.681  decod/Ham_out_7 (decod/Ham_out_7)
+     OBUF:I->O                 4.909          Ham_out_7_OBUF (Ham_out<7>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+CPU : 857.42 / 857.80 s | Elapsed : 857.00 / 858.00 s
+ 
+--> 
+
+Total memory usage is 410500 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings : 1049 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

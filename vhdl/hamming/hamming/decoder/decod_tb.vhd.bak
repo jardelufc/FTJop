@@ -1,0 +1,123 @@
+
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   14:49:37 09/25/2008
+-- Design Name:   ham_decod
+-- Module Name:   C:/Documents and Settings/david/LESC/Hamming/hamming(15-09)/decoder/decod_tb.vhd
+-- Project Name:  decoder
+-- Target Device:  
+-- Tool versions:  
+-- Description:   
+-- 
+-- VHDL Test Bench Created by ISE for module: ham_decod
+--
+-- Dependencies:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+--
+-- Notes: 
+-- This testbench has been automatically generated using types std_logic and
+-- std_logic_vector for the ports of the unit under test.  Xilinx recommends 
+-- that these types always be used for the top-level I/O of a design in order 
+-- to guarantee that the testbench will bind correctly to the post-implementation 
+-- simulation model.
+--------------------------------------------------------------------------------
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.ALL;
+
+ENTITY decod_tb_vhd IS
+END decod_tb_vhd;
+
+ARCHITECTURE behavior OF decod_tb_vhd IS 
+
+	-- Component Declaration for the Unit Under Test (UUT)
+	COMPONENT ham_decod
+	PORT(
+		reset : IN std_logic;
+		tclk : IN std_logic;
+		enable : IN std_logic;
+		data : IN std_logic_vector(12 downto 1);
+		addr_in : IN std_logic_vector(11 downto 0);          
+		addr_out : OUT std_logic_vector(11 downto 0);
+		ready : OUT std_logic;
+		error : OUT std_logic;
+		Ham_out : OUT std_logic_vector(7 downto 0)
+		);
+	END COMPONENT;
+
+	--Inputs
+	SIGNAL reset :  std_logic := '0';
+	SIGNAL tclk :  std_logic := '0';
+	SIGNAL enable :  std_logic := '0';
+	SIGNAL data :  std_logic_vector(12 downto 1) := (others=>'0');
+	SIGNAL addr_in :  std_logic_vector(11 downto 0) := (others=>'0');
+
+	--Outputs
+	SIGNAL addr_out :  std_logic_vector(11 downto 0);
+	SIGNAL ready :  std_logic;
+	SIGNAL error :  std_logic;
+	SIGNAL Ham_out :  std_logic_vector(7 downto 0);
+
+BEGIN
+
+	-- Instantiate the Unit Under Test (UUT)
+	uut: ham_decod PORT MAP(
+		reset => reset,
+		tclk => tclk,
+		enable => enable,
+		data => data,
+		addr_in => addr_in,
+		addr_out => addr_out,
+		ready => ready,
+		error => error,
+		Ham_out => Ham_out
+	);
+	
+	clock : process
+	begin
+	
+		tclk <= '1';
+		wait for 50 ns;
+		tclk <= '0';
+		wait for 50 ns;
+		
+	end process;
+	
+	tb : PROCESS
+	BEGIN
+		reset <= '1';
+
+		-- Wait 100 ns for global reset to finish
+		wait for 100 ns;
+		reset <= '0';
+		--en_enc <= '1';
+      data <= x"001";
+		enable <= '1';
+		wait for 100 ns;
+		addr_in <= "000001100001";
+		data <= x"000";
+		wait for 100 ns;
+		addr_in <= "000011100000";
+		data <= x"200";
+		wait for 100 ns;
+		--data_dec <= x"02";
+		addr_in <= "000001100010";
+		data <= x"400";
+		enable <= '0';
+		wait for 100 ns;
+		addr_in <= "010001100011";
+		
+
+
+		-- Place stimulus here
+
+		wait; -- will wait forever
+	END PROCESS;
+
+END;

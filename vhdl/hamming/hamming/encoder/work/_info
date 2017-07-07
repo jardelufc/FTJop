@@ -1,0 +1,65 @@
+m255
+13
+cModel Technology
+dC:\Modeltech_6.1e\examples
+Eencod_tb_vhd
+w1226757063
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dC:\LESC\Hamming\hamming(15-09)\encoder
+FC:/LESC/Hamming/hamming(15-09)/encoder/ham_encod/encod_tb.vhd
+l0
+L34
+VZiV]3GBhBC3PCoJC`7cK^2
+OE;C;6.1e;31
+32
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work encod_tb_vhd ZiV]3GBhBC3PCoJC`7cK^2
+l61
+L37
+V9P>GodDNTz[05L6P7idT]3
+OE;C;6.1e;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Eham_enc
+w1226756782
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dC:\LESC\Hamming\hamming(15-09)\encoder
+FC:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd
+l0
+L30
+ViTC2jGAZ>ZQnn:6P>P7A?2
+OE;C;6.1e;31
+32
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work ham_enc iTC2jGAZ>ZQnn:6P>P7A?2
+l45
+L43
+V[D^9_ak]LDH;:N[R8JL:N3
+OE;C;6.1e;31
+32
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000

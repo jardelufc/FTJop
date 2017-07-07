@@ -1,0 +1,23 @@
+/ArrayReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ArrayTypePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/BasicPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ClassLoaderPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ClassObjectReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ClassTypePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ComposedPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/DescriptionPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/EventPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/EventRequestPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/JDWPException.java/1.1/Wed Oct  3 00:52:06 2007//
+/JDWPPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/MainPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/MethodPacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ObjectReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/PacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ReferenceTypePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/StackFramePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/StringReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ThreadGroupReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/ThreadReferencePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+/VirtualMachinePacketHandler.java/1.1/Wed Oct  3 00:52:06 2007//
+D

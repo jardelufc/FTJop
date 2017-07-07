@@ -1,0 +1,3 @@
+xst -ise "C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/memo.ise" -intstyle ise -ifn jbc.xst -ofn jbc.syr
+xst -ise "C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/memo.ise" -intstyle ise -ifn jbc.xst -ofn jbc.syr
+xst -ise "C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/memo.ise" -intstyle ise -ifn jbc.xst -ofn jbc.syr

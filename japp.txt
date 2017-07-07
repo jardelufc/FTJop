@@ -1,0 +1,54 @@
+make java_app
+make[1]: Entering directory `/cygdrive/d/jop'
+rm -rf java/target/dist
+mkdir java/target/dist
+mkdir java/target/dist/classes
+mkdir java/target/dist/lib
+mkdir java/target/dist/bin
+
+javac -d java/target/dist/classes 
+-sourcepath java/target/src/common\;java/target/src/jdk_base\;java/target/src/jdk11\;java/target/src/rtapi\;java/target/src/test\;java/target/src/bench\;java/target/src/app 
+-bootclasspath "" -extdirs "" -classpath "" -source 1.5 java/target/src/common/com/jopdesign/sys/*.java
+
+javac -d java/target/dist/classes 
+-sourcepath java/target/src/common\;java/target/src/jdk_base\;java/target/src/jdk11\;java/target/src/rtapi\;java/target/src/test\;java/target/src/bench\;java/target/src/app 
+-bootclasspath "" -extdirs "" -classpath "" -source 1.5 java/target/src/jdk_base/java/lang/annotation/*.java	# oh new Java 1.5 world!
+
+javac -d java/target/dist/classes -sourcepath java/target/src/common\;java/target/src/jdk_base\;java/target/src/jdk11\;java/target/src/rtapi\;java/target/src/test\;java/target/src/bench\;java/target/src/app 
+-bootclasspath "" -extdirs "" -classpath "" -source 1.5 java/target/src/test/test/HelloWorld.java
+cd java/target/dist/classes && jar cf ../lib/classes.zip *
+
+java  -classpath java/lib/bcel-5.1.jar\;java/lib/jakarta-regexp-1.3.jar\;java/lib/RXTXcomm.jar\;java/lib/lpsolve55j.jar\;java/lib/log4j-1.2.15.jar\;java/lib/jgrapht-jdk1.5.jar\;java/lib/velocity-1.5.jar\;java/lib/velocity-dep-1.5.jar\;java/tools/dist/lib/jop-tools.jar\;java/tools/dist/lib/JopDebugger.jar 
+		-Dmgci=false com.jopdesign.build.JOPizer \
+		-cp java/target/dist/lib/classes.zip -o java/target/dist/bin/HelloWorld.jop test/HelloWorld
+
+[Ljava.lang.String;@1fb8ee3
+com.jopdesign.sys.JVMHelp
+com.jopdesign.sys.JVM
+com.jopdesign.sys.Startup
+test.HelloWorld
+[test.HelloWorld, java.lang.Object, java.lang.Character, java.lang.ArithmeticException, java.lang.NullPointerException, com.jopdesign.sys.Startup, java.lang.System, java.lang.StringIndexOutOfBoundsException, java.lang.CloneNotSupportedException, java.lang.IllegalArgumentException, com.jopdesign.sys.DummyHandler, java.lang.ArrayStoreException, java.lang.IndexOutOfBoundsException, com.jopdesign.io.SerialPort, java.io.PrintStream, java.lang.Throwable, com.jopdesign.io.IOFactory, java.io.JOPInputStream, java.lang.RuntimeException, java.io.UnsupportedEncodingException, util.Dbg, com.jopdesign.sys.JVM, java.lang.Runnable, java.lang.StringBuilder, java.lang.Error, joprt.RtThread, com.jopdesign.io.SysDevice, com.jopdesign.io.HardwareObject, java.lang.NumberFormatException, com.jopdesign.sys.GC, com.jopdesign.sys.Scheduler, java.lang.OutOfMemoryError, com.jopdesign.sys.RtThreadImpl$CMPStart, java.io.InputStream, java.lang.StringBuffer, java.lang.Integer, java.lang.Math, java.lang.CharSequence, com.jopdesign.sys.SoftFloat, java.lang.Exception, util.DbgSerial, util.DbgUdp, java.io.IOException, com.jopdesign.sys.JVMHelp, java.io.Serializable, java.lang.Float, java.lang.String, java.lang.StackOverflowError, java.lang.NegativeArraySizeException, java.lang.ClassCastException, com.jopdesign.sys.Scope, java.io.JOPPrintStream, java.lang.Long, java.lang.IllegalStateException, java.io.OutputStream, java.lang.ArrayIndexOutOfBoundsException, java.lang.VirtualMachineError, com.jopdesign.sys.RtThreadImpl]
+Class util.Dbg
+Class com.jopdesign.sys.Startup
+Class java.lang.StringBuffer
+Class com.jopdesign.sys.Scheduler
+	depends com.jopdesign.io.IOFactory
+Class com.jopdesign.sys.RtThreadImpl
+	depends com.jopdesign.io.IOFactory
+Class com.jopdesign.io.IOFactory
+	depends com.jopdesign.sys.Startup
+Class java.lang.Long
+Class java.lang.Integer
+26KB instruction
+793 number of methods
+java -classpath java/lib/bcel-5.1.jar\;java/lib/jakarta-regexp-1.3.jar\;java/lib/RXTXcomm.jar\;java/lib/lpsolve55j.jar\;java/lib/log4j-1.2.15.jar\;java/lib/jgrapht-jdk1.5.jar\;java/lib/velocity-1.5.jar\;java/lib/velocity-dep-1.5.jar\;java/tools/dist/lib/jop-tools.jar\;java/tools/dist/lib/JopDebugger.jar com.jopdesign.tools.jop2dat java/target/dist/bin/HelloWorld.jop
+Program: java/target/dist/bin/HelloWorld.jop
+11823 instruction word (46 KB)
+11823 words mem read (46 KB)
+cp *.dat modelsim
+rm -f *.dat
+make[1]: Leaving directory `/cygdrive/d/jop'
+make config_byteblaster
+make[1]: Entering directory `/cygdrive/d/jop'
+cd quartus/cycmin && quartus_pgm -c ByteBlasterMV -m JTAG jop.cdf
+make[1]: Leaving directory `/cygdrive/d/jop'

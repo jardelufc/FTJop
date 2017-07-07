@@ -1,0 +1,12 @@
+AR jbc sim C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/../memo_s4_s18.vhd sub00/vhpl01 1229448383
+EN ham_enc NULL C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd sub00/vhpl04 1229620967
+EN ham_top NULL C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/../../top/ham_top.vhd sub00/vhpl10 1229621865
+AR hamming behavior C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl03 1229604348
+EN ham_decod NULL C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl06 1229620969
+AR ham_enc behavioral C:/LESC/Hamming/hamming(15-09)/encoder/ham_enc.vhd sub00/vhpl05 1229620968
+AR ham_top behavioral C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/../../top/ham_top.vhd sub00/vhpl11 1229621866
+AR bhc sim C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd sub00/vhpl09 1229620972
+EN jbc NULL C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo/../memo_s4_s18.vhd sub00/vhpl00 1229448382
+EN hamming NULL C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl02 1229604347
+EN bhc NULL C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd sub00/vhpl08 1229620971
+AR ham_decod behavior C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd sub00/vhpl07 1229620970

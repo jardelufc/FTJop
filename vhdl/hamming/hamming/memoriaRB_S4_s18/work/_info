@@ -1,0 +1,62 @@
+m255
+13
+cModel Technology
+dC:\LESC\Hamming\hamming(15-09)\decoder
+Ejbc
+w1229447543
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dC:\LESC\Hamming\hamming(15-09)\memoriaRB_S4_s18
+FC:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd
+l0
+L42
+VVW=_H001_Sl7YSe71Fc313
+OE;C;6.1e;31
+32
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Asim
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work jbc VW=_H001_Sl7YSe71Fc313
+l74
+L54
+V;9V;4GEV;^EhYMS6LPhRi1
+OE;C;6.1e;31
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Ememo_tb_vhd
+w1229448979
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dC:\LESC\Hamming\hamming(15-09)\memoriaRB_S4_s18
+FC:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_tb.vhd
+l0
+L34
+V89=W:=O]@MQYzC1A3Rb<91
+OE;C;6.1e;31
+32
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work memo_tb_vhd 89=W:=O]@MQYzC1A3Rb<91
+l61
+L37
+V6?`cimXh<Fk^A98b_B8Zc3
+OE;C;6.1e;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1 GenerateLoopIterationMax 100000

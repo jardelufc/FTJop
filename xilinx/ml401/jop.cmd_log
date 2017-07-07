@@ -1,0 +1,7 @@
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+xst -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ifn jop.xst -ofn jop.syr
+netgen -ise "C:/David/jop3_ham_crc/jop/xilinx/ml401/jop.ise" -intstyle ise -ar Structure -tm jop -w -dir netgen/synthesis -ofmt vhdl -sim jop.ngc jop_synthesis.vhd

@@ -1,0 +1,10 @@
+C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd {1 {vcom -work work -2002 -explicit -novopt C:/LESC/Hamming/hamming(15-09)/decoder/ham_decod.vhd
+Model Technology ModelSim SE vcom 6.1e Compiler 2006.03 Mar  8 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity hamming
+-- Compiling architecture behavior of hamming
+
+} {} {}}

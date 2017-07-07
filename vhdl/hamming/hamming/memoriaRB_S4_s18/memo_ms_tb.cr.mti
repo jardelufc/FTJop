@@ -1,0 +1,20 @@
+C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_tb.vhd {1 {vcom -work work -2002 -explicit -novopt C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_tb.vhd
+Model Technology ModelSim SE vcom 6.1e Compiler 2006.03 Mar  8 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package numeric_std
+-- Compiling entity memo_tb_vhd
+-- Compiling architecture behavior of memo_tb_vhd
+
+} {} {}} C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd {2 {vcom -work work -2002 -explicit -novopt C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd
+Model Technology ModelSim SE vcom 6.1e Compiler 2006.03 Mar  8 2006
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity jbc
+-- Compiling architecture sim of jbc
+** Warning: C:/LESC/Hamming/hamming(15-09)/memoriaRB_S4_s18/memo_s4_s18.vhd(72): (vcom-1236) Shared variables must be of a protected type.
+
+} {} {}}

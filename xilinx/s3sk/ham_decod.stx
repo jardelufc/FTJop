@@ -1,0 +1,22 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.49 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/David/jop3_v2/jop/vhdl/hamming/hamming/decoder/ham_decod.vhd" in Library work.
+Entity <ham_decod> compiled.
+Entity <ham_decod> (Architecture <behavior>) compiled.
+CPU : 0.41 / 0.89 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 111280 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
