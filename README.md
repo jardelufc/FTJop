@@ -20,10 +20,16 @@ Substituir o arquivo mem_sc que estiver lá por mem_sc_ham(ou coisa parecida), e
 
 JOP+HAM+CRC:
 
-Substitui o arquivo mem_sc que estiver lá por mem_sc, e vai no jop_cpu e descomenta o sinal crc_bsy se estiver sendo usado
+Substituir o arquivo mem_sc que estiver lá por mem_sc, e vai no jop_cpu e descomenta o sinal crc_bsy se estiver sendo usado
 
 JopMethodInfoLesc.java is the program for appendind extra CRC check bytes for each method.
 
+Main modifications when compared to genuine JOP are:
 
-
-
+1. https://github.com/jardelufc/FTJop/blob/master/vhdl/memory/mem_sc.vhd
+2. https://github.com/jardelufc/FTJop/blob/master/vhdl/crc/crc.vhd
+3. https://github.com/jardelufc/FTJop/blob/master/vhdl/hamming/hamming/top/ham_top.vhd 
+4. https://github.com/jardelufc/FTJop/tree/master/vhdl/hamming/hamming/decoder
+5. https://github.com/jardelufc/FTJop/blob/master/vhdl/hamming/hamming/encoder/ham_enc.vhd
+6. https://github.com/jardelufc/FTJop/tree/master/vhdl/hamming/hamming/memoriaRB_S4_s18
+7. https://github.com/jardelufc/FTJop/blob/master/JopMethodInfoLesc.java
