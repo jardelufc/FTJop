@@ -1,11 +1,13 @@
 # FTJop
 
 
-This is the Source code for FTJOP, the research developed in Master Thesis of Jardel Silveira: http://livros01.livrosgratis.com.br/cp152022.pdf .
+This is the Source code for FTJOP, the research developed in Master Thesis of Jardel Silveira: http://livros01.livrosgratis.com.br/cp152022.pdf . If you don't know read in portuguese, try it https://github.com/jardelufc/FTJop/blob/master/ftcache_ieeecompsoc.pdf .
 
 Genuine JOP : https://github.com/jop-devel/jop or http://www.jopdesign.com/
 
+If you wanna cite this work: 
 
+SILVEIRA, R. J. N.; VIANA, D. ; Castro H. ; COELHO, A. A. P. ; SILVEIRA, J. A. N. . Técnica de Proteção de Bytecodes para Processador Java em Tecnologia CMOS. In: WSCAD-SSC 2009: X Simpósio em Sistemas Computacionais, 2009, São Paulo. Anais do WSCAD-SSC 2009: X Simpósio em Sistemas Computacionais, 2009.
 
 Instructions for mounting in ML401 board:
 
