@@ -1,7 +1,7 @@
 # FTJop
 
 
-<a href="http://silicon-russia.com/pages/2015_12_28/hierarchy_nexys4_ddr_full.html"><img src="http://silicon-russia.com/pages/2015_12_28/hierarchy_nexys4_ddr_full.png"></a>
+<a href="http://silicon-russia.com/pages/2015_12_28/hierarchy_nexys4_ddr_full.html"><img src="https://github.com/jardelufc/FTJop/blob/master/jop.jpg"></a>
 
 This is the Source code for FTJOP, the research developed in Master Thesis of Jardel Silveira: http://livros01.livrosgratis.com.br/cp152022.pdf . If you don't know read in portuguese, try it https://github.com/jardelufc/FTJop/blob/master/ftcache_ieeecompsoc.pdf .
 
