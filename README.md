@@ -35,3 +35,5 @@ Main modifications when compared to genuine JOP are:
 5. https://github.com/jardelufc/FTJop/blob/master/vhdl/hamming/hamming/encoder/ham_enc.vhd
 6. https://github.com/jardelufc/FTJop/tree/master/vhdl/hamming/hamming/memoriaRB_S4_s18
 7. https://github.com/jardelufc/FTJop/blob/master/JopMethodInfoLesc.java
+
+This should be util for porting ftjop for nexys 4 ddr: http://wiki.ztex.de/doku.php?id=en:projects:jop and http://www.jopdesign.com/doc/sdramctrl.pdf
